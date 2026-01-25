@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible House Renovation - Project Overview</title>
+    <title>Bible House Renovation - Home</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,7 +16,7 @@
             justify-content: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px;
             background: white;
             padding: 40px;
@@ -32,22 +32,6 @@
             text-align: center;
             color: #666;
             margin-bottom: 30px;
-        }
-        .button {
-            display: block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.2em;
-            margin: 20px 0;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
         }
         .info-grid {
             display: grid;
@@ -73,29 +57,69 @@
             font-size: 1.3em;
             font-weight: bold;
         }
-        .features {
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .nav-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+        .nav-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3em;
+        }
+        .nav-card p {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .version-toggle {
+            text-align: center;
             margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
         }
-        .features ul {
-            list-style: none;
-            padding: 0;
+        .version-toggle a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
         }
-        .features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+        .version-toggle a:hover {
+            background: #764ba2;
         }
-        .features li:before {
-            content: "✓ ";
-            color: #4caf50;
-            font-weight: bold;
-            margin-right: 10px;
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🏠 Bible House Renovation Project</h1>
-        <p class="subtitle">Complete Professional Project Plan & Documentation</p>
+        <p class="subtitle">Complete Professional Project Documentation</p>
         
         <div class="info-grid">
             <div class="info-card">
@@ -111,29 +135,58 @@
                 <p>8 Major</p>
             </div>
             <div class="info-card">
-                <h3>Images</h3>
-                <p>32 B/A</p>
+                <h3>B/A Images</h3>
+                <p>32 Total</p>
             </div>
         </div>
 
-        <a href="professional_renovation_plan_complete.html" class="button">
-            📋 View Complete Project Plan
-        </a>
-
-        <div class="features">
-            <h3>What's Included:</h3>
-            <ul>
-                <li>Interactive before/after image comparisons</li>
-                <li>Detailed cost breakdown by category</li>
-                <li>Complete materials & specifications</li>
-                <li>Project timeline & phases</li>
-                <li>Prioritization recommendations</li>
-                <li>Mobile-responsive design</li>
-                <li>OCR scanned documents</li>
-            </ul>
+        <h2 style="color: #667eea; text-align: center; margin: 30px 0 20px;">📚 Step-by-Step Guide</h2>
+        
+        <div class="nav-grid">
+            <a href="overview.html" class="nav-card">
+                <h3>1️⃣ Overview</h3>
+                <p>Project scope and objectives</p>
+            </a>
+            
+            <a href="costs.html" class="nav-card">
+                <h3>2️⃣ Costs</h3>
+                <p>Complete budget breakdown</p>
+            </a>
+            
+            <a href="materials.html" class="nav-card">
+                <h3>3️⃣ Materials</h3>
+                <p>Specifications & requirements</p>
+            </a>
+            
+            <a href="timeline.html" class="nav-card">
+                <h3>4️⃣ Timeline</h3>
+                <p>Week-by-week schedule</p>
+            </a>
+            
+            <a href="beforeafter.html" class="nav-card">
+                <h3>5️⃣ Before & After (1)</h3>
+                <p>Visual comparisons 1-8</p>
+            </a>
+            
+            <a href="beforeafter2.html" class="nav-card">
+                <h3>6️⃣ Before & After (2)</h3>
+                <p>Visual comparisons 9-16</p>
+            </a>
+            
+            <a href="prioritization.html" class="nav-card">
+                <h3>7️⃣ Prioritization</h3>
+                <p>Implementation recommendations</p>
+            </a>
         </div>
 
-        <div style="text-align: center; margin-top: 30px; color: #666;">
+        <div class="version-toggle">
+            <h3 style="color: #667eea;">Choose Your View:</h3>
+            <p style="margin-bottom: 15px;">Multi-page version (fast loading) or single-page version (all content at once)</p>
+            <a href="overview.html">📚 Start Step-by-Step Guide</a>
+            <a href="professional_renovation_plan_complete.html">📄 View Complete Single Page</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
             <p><em>Last Updated: January 2026</em></p>
         </div>
     </div>

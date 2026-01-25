@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible House Renovation - Prioritization</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .progress-bar {
+            background: rgba(255,255,255,0.2);
+            height: 8px;
+            border-radius: 10px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: #4caf50;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: #f9f9f9;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .nav-button {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .nav-button.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            margin: 20px 0 10px;
+            font-size: 1.4em;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .success-box {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .cost-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .cost-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-top: 3px solid #667eea;
+        }
+        
+        .cost-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cost-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .comparison-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .comparison-images {
+            position: relative;
+            width: 100%;
+            height: 500px;
+        }
+        
+        .comparison-before, .comparison-after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .comparison-after {
+            clip-path: inset(0 50% 0 0);
+        }
+        
+        .comparison-before img, .comparison-after img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .comparison-slider {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: white;
+            left: 50%;
+            top: 0;
+            cursor: ew-resize;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        
+        .comparison-slider::before {
+            content: '⟨ ⟩';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: #667eea;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .comparison-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        /* Mobile Responsive */
+        @media screen and (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .cost-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-images {
+                height: 300px;
+            }
+            
+            table {
+                font-size: 0.85em;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+            
+            .section h2 {
+                font-size: 1.5em;
+            }
+            
+            .comparison-images {
+                height: 250px;
+            }
+        }
+    </style>
+
+    <style>
+        .priority-high { border-left-color: #f44336; }
+        .priority-medium { border-left-color: #ff9800; }
+        .priority-low { border-left-color: #4caf50; }
+        .priority-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .badge-high { background: #ffebee; color: #f44336; }
+        .badge-medium { background: #fff3e0; color: #ff9800; }
+        .badge-low { background: #e8f5e9; color: #4caf50; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⭐ Project Prioritization</h1>
+            <p>Step 7: Recommended Implementation Order</p>
+        </div>
+        
+        
+    <div class="navigation">
+        <a href="beforeafter2.html" class="nav-button">← Previous</a>
+        <div style="text-align: center; flex: 1;">
+            <div style="font-weight: 600; color: #667eea;">Step 7 of 7</div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100.0%"></div>
+            </div>
+        </div>
+        <span class="nav-button disabled">Next →</span>
+    </div>
+
+        
+        <div class="content">
+            <div class="section">
+                <h2>Priority-Based Implementation Plan</h2>
+                
+                <div class="info-box priority-high">
+                    <span class="priority-badge badge-high">🔴 HIGH PRIORITY</span>
+                    <h3>Phase 1: Critical Structural & Safety (Weeks 1-4)</h3>
+                    <p><strong>Budget:</strong> R 200,000</p>
+                    <ul>
+                        <li><strong>Roof Waterproofing (R 80,000)</strong>
+                            <ul>
+                                <li>Prevents water damage and structural deterioration</li>
+                                <li>Must be completed before rainy season</li>
+                                <li>Foundation for all interior work</li>
+                            </ul>
+                        </li>
+                        <li><strong>Electrical System Upgrade (R 120,000)</strong>
+                            <ul>
+                                <li>Safety critical - prevents fire hazards</li>
+                                <li>Required for all other trades</li>
+                                <li>Must meet current building codes</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="info-box priority-medium">
+                    <span class="priority-badge badge-medium">🟡 MEDIUM PRIORITY</span>
+                    <h3>Phase 2: Systems & Infrastructure (Weeks 3-7)</h3>
+                    <p><strong>Budget:</strong> R 258,500</p>
+                    <ul>
+                        <li><strong>Plumbing & Solar Geysers (R 138,500)</strong>
+                            <ul>
+                                <li>Modern, efficient water system</li>
+                                <li>Solar geysers reduce long-term energy costs</li>
+                                <li>Essential for daily operations</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ceiling Installation (R 120,000)</strong>
+                            <ul>
+                                <li>Improves insulation and appearance</li>
+                                <li>Covers electrical conduits</li>
+                                <li>Prerequisite for painting</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="info-box priority-low">
+                    <span class="priority-badge badge-low">🟢 STANDARD PRIORITY</span>
+                    <h3>Phase 3: Finishing & Aesthetics (Weeks 7-12)</h3>
+                    <p><strong>Budget:</strong> R 272,400</p>
+                    <ul>
+                        <li><strong>Painting (R 80,000)</strong>
+                            <ul>
+                                <li>Protects surfaces and improves appearance</li>
+                                <li>Can be done in phases if needed</li>
+                                <li>Relatively flexible timing</li>
+                            </ul>
+                        </li>
+                        <li><strong>Tiling (R 100,000)</strong>
+                            <ul>
+                                <li>Durable flooring solution</li>
+                                <li>Can be prioritized for high-traffic areas first</li>
+                                <li>Adds property value</li>
+                            </ul>
+                        </li>
+                        <li><strong>Doors & Hardware (R 18,440)</strong>
+                            <ul>
+                                <li>Improves security and privacy</li>
+                                <li>Can replace in phases if budget constrained</li>
+                            </ul>
+                        </li>
+                        <li><strong>Miscellaneous Items (R 73,960.88)</strong>
+                            <ul>
+                                <li>Windows, demolition, sundries</li>
+                                <li>Support items for main work</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="success-box">
+                    <h3>💡 Budget Flexibility Options</h3>
+                    
+                    <h4>If Budget Constraints Exist:</h4>
+                    <ol>
+                        <li><strong>Minimum Viable Project (R 320,000)</strong>
+                            <ul>
+                                <li>Roof waterproofing</li>
+                                <li>Electrical upgrade</li>
+                                <li>Basic plumbing (without solar geysers)</li>
+                                <li>Essential ceilings only</li>
+                            </ul>
+                        </li>
+                        <li><strong>Phase 2 Addition (+R 218,500)</strong>
+                            <ul>
+                                <li>Add solar geysers</li>
+                                <li>Complete all ceilings</li>
+                                <li>Basic painting</li>
+                            </ul>
+                        </li>
+                        <li><strong>Phase 3 Completion (+R 192,400)</strong>
+                            <ul>
+                                <li>Full painting</li>
+                                <li>Complete tiling</li>
+                                <li>Doors and finishing</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>⚠️ Critical Considerations</h3>
+                    <ul>
+                        <li><strong>Don't compromise on:</strong> Roof waterproofing and electrical safety</li>
+                        <li><strong>Best ROI:</strong> Solar geysers pay for themselves in 3-5 years</li>
+                        <li><strong>Weather dependent:</strong> Complete roofing before rainy season</li>
+                        <li><strong>Code compliance:</strong> All electrical and plumbing work must be certified</li>
+                        <li><strong>Sequence matters:</strong> Some work must follow specific order</li>
+                    </ul>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="overview.html" class="nav-button">🔄 Start Over</a>
+                    <a href="index.html" class="nav-button">🏠 Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
