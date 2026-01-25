@@ -60,18 +60,26 @@ git push -u origin main
 3. Under "Source":
    - Branch: Select **main**
    - Folder: Select **/ (root)**
-4. Click **Save**
+4. Under "Custom domain":
+   - Enter: **www.ubf-reno-up.com**
+   - Click **Save**
+   - ⚠️ **Important:** You must configure DNS records with your domain registrar (see step 6)
 5. Wait 2-3 minutes for deployment
 
 ### 5️⃣ Access Your Site
 Your site will be live at:
 ```
-https://YOUR_USERNAME.github.io/bible-house-reno/
+http://www.ubf-reno-up.com
 ```
 
 The main project page:
 ```
-https://YOUR_USERNAME.github.io/bible-house-reno/professional_renovation_plan_complete.html
+http://www.ubf-reno-up.com/professional_renovation_plan_complete.html
+```
+
+Step-by-step guide:
+```
+http://www.ubf-reno-up.com/overview.html
 ```
 
 ---
@@ -100,10 +108,26 @@ If GitHub rejects the 56MB file:
 
 2. **Or split the file** (I can help with this)
 
-### Custom Domain (Optional)
-- Go to Settings → Pages
-- Add your custom domain
-- Update DNS settings
+### Custom Domain Setup
+After enabling GitHub Pages with your custom domain **www.ubf-reno-up.com**, you need to configure DNS records with your domain registrar:
+
+**Step 6: Configure DNS Records**
+
+1. Log in to your domain registrar (where you bought ubf-reno-up.com)
+
+2. Go to DNS settings and add a **CNAME record**:
+   - **Type:** CNAME
+   - **Name:** www
+   - **Value:** bryne-ra.github.io
+   - **TTL:** 3600 (or default)
+
+3. Save the DNS changes
+
+4. Wait 24-48 hours for DNS propagation (usually much faster, often within minutes)
+
+5. Once DNS is configured, GitHub will automatically issue an HTTPS certificate
+
+For more details, see: [GitHub's DNS Configuration Guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 
 ---
 

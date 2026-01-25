@@ -19,7 +19,7 @@ A comprehensive renovation project documentation with interactive before/after i
 
 ## 🌐 View Project
 
-Visit the live project: [Bible House Renovation Plan](https://bryne_ra.github.io/bible-house-reno/)
+Visit the live project: [Bible House Renovation Plan](http://www.ubf-reno-up.com)
 
 ## 📱 Features
 
