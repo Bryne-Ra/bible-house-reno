@@ -12,18 +12,18 @@ image_pairs = [
     ("pic1b4.jpg.jpg", "pic1after2.jpg.png", "Exterior Front View - Option 2"),
     ("pic2b4.jpg.jpg", "pic2after.jpg.png", "Side Entrance - Option 1"),
     ("pic2b4.jpg.jpg", "pic2after2.jpg.png", "Side Entrance - Option 2"),
-    ("pic3b4.jpg.jpg", "pic3after.jpg.png", "Garden Area"),
-    ("pic3b42.jpg.jpg", "pic3after.jpg.png", "Garden Area - Alternate View"),
+    ("pic3b4.jpg.jpg", "pic3after.jpg.png", "Garden Area - View 1"),
+    ("pic3b42.jpg.jpg", "pic3after.jpg.png", "Garden Area - View 2"),
     ("pic4b4.jpg.jpg", "pic4after.jpg.png", "Roof & Structure - View 1"),
     ("pic4b42.jpg.jpg", "pic4after.jpg.png", "Roof & Structure - View 2"),
+    ("pic4b4.jpg.jpg", "pic5after.jpg.png", "Roof & Structure - After Option 2"),
     ("pic6b4.jpg.jpg", "pic6after.jpg.png", "Building Exterior - View 1"),
     ("pic6b42.jpg.jpg", "pic6after.jpg.png", "Building Exterior - View 2"),
     ("pic6b43.jpg.jpg", "pic6after.jpg.png", "Building Exterior - View 3"),
     ("pic7b4.jpg.jpg", "pic7after.jpg.png", "Entrance Walkway"),
     ("pic8b4.jpg.jpg", "pic8after.jpg.png", "Play Area Equipment - View 1"),
     ("pic8b42.jpg.jpg", "pic8after.jpg.png", "Play Area Equipment - View 2"),
-    ("junglegym1.jpg.jpg", "pic8after.jpg.png", "Playground Equipment"),
-    ("junglegym2.jpg.jpg", "pic8after.jpg.png", "Playground Area"),
+    ("junglegym1.jpg.jpg", "pic8after.jpg.png", "Playground Equipment - View 1"),
 ]
 
 def image_to_base64(image_path):
