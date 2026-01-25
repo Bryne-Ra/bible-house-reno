@@ -8,22 +8,22 @@ images_dir = base_dir / "before and after pictures"
 
 # Image pairs for before/after
 image_pairs = [
-    ("pic1b4.jpg.jpg", "pic1after.jpg.png", "Exterior Front View - Option 1"),
-    ("pic1b4.jpg.jpg", "pic1after2.jpg.png", "Exterior Front View - Option 2"),
-    ("pic2b4.jpg.jpg", "pic2after.jpg.png", "Side Entrance - Option 1"),
-    ("pic2b4.jpg.jpg", "pic2after2.jpg.png", "Side Entrance - Option 2"),
-    ("pic3b4.jpg.jpg", "pic3after.jpg.png", "Garden Area - View 1"),
-    ("pic3b42.jpg.jpg", "pic3after.jpg.png", "Garden Area - View 2"),
-    ("pic4b4.jpg.jpg", "pic4after.jpg.png", "Roof & Structure - View 1"),
-    ("pic4b42.jpg.jpg", "pic4after.jpg.png", "Roof & Structure - View 2"),
-    ("pic4b4.jpg.jpg", "pic5after.jpg.png", "Roof & Structure - After Option 2"),
-    ("pic6b4.jpg.jpg", "pic6after.jpg.png", "Building Exterior - View 1"),
-    ("pic6b42.jpg.jpg", "pic6after.jpg.png", "Building Exterior - View 2"),
-    ("pic6b43.jpg.jpg", "pic6after.jpg.png", "Building Exterior - View 3"),
-    ("pic7b4.jpg.jpg", "pic7after.jpg.png", "Entrance Walkway"),
-    ("pic8b4.jpg.jpg", "pic8after.jpg.png", "Play Area Equipment - View 1"),
-    ("pic8b42.jpg.jpg", "pic8after.jpg.png", "Play Area Equipment - View 2"),
-    ("junglegym1.jpg.jpg", "pic8after.jpg.png", "Playground Equipment - View 1"),
+    ("pic1b4.jpg.jpg", "pic1after.jpg.png", "View 1"),
+    ("pic1b4.jpg.jpg", "pic1after2.jpg.png", "View 2"),
+    ("pic2b4.jpg.jpg", "pic2after.jpg.png", "View 3"),
+    ("pic2b4.jpg.jpg", "pic2after2.jpg.png", "View 4"),
+    ("pic3b4.jpg.jpg", "pic3after.jpg.png", "View 5"),
+    ("pic3b42.jpg.jpg", "pic3after.jpg.png", "View 6"),
+    ("pic4b4.jpg.jpg", "pic4after.jpg.png", "View 7"),
+    ("pic4b42.jpg.jpg", "pic4after.jpg.png", "View 8"),
+    ("pic4b4.jpg.jpg", "pic5after.jpg.png", "View 9"),
+    ("pic6b4.jpg.jpg", "pic6after.jpg.png", "View 10"),
+    ("pic6b42.jpg.jpg", "pic6after.jpg.png", "View 11"),
+    ("pic6b43.jpg.jpg", "pic6after.jpg.png", "View 12"),
+    ("pic7b4.jpg.jpg", "pic7after.jpg.png", "View 13"),
+    ("pic8b4.jpg.jpg", "pic8after.jpg.png", "View 14"),
+    ("pic8b42.jpg.jpg", "pic8after.jpg.png", "View 15"),
+    ("junglegym1.jpg.jpg", "pic8after.jpg.png", "View 16"),
 ]
 
 def image_to_base64(image_path):
