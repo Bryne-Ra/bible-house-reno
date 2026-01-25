@@ -42,12 +42,12 @@ Visit the live project: [Bible House Renovation Plan](http://www.ubf-reno-up.com
 |----------|------------|
 | Roof Waterproofing | 80,000 |
 | Electrical | 120,000 |
-| Plumbing | 138,500 |
+| Plumbing (incl. 2x 200L Solar Geysers) | 138,500 |
 | Ceilings | 120,000 |
 | Painting | 80,000 |
 | Tiling | 100,000 |
 | Doors | 18,440 |
-| Miscellaneous | 73,960.88 |
+| Miscellaneous (Windows, Demolition, Sundries, VAT) | 93,960 |
 | **Total** | **730,900** |
 
 ## 📄 License
