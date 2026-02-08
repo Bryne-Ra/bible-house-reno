@@ -1,14 +1,29 @@
-# Python cache
+# Python cache and virtual environment
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+.venv/
+venv/
+env/
 
 # Distribution / packaging
 dist/
 build/
 *.egg-info/
+
+# Development directories (not needed for website)
+ai_editing_batch/
+ocr/
+old_html/
+extracted_images/
+materials_and_spce/
+
+# Development scripts (not needed for website)
+*.py
+*.bat
+*.ps1
 
 # IDEs
 .vscode/
@@ -22,10 +37,11 @@ build/
 Thumbs.db
 desktop.ini
 
-# Temporary files
+# Temporary and debugging files
 *.tmp
 *.bak
 *.log
+COHERENCE_ISSUES.md
 
 # Large files (optional - remove if you want to include them)
 # *.jpg
