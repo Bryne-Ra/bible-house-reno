@@ -35,11 +35,8 @@ A comprehensive renovation project documentation with interactive before/after i
 Visit the live project: [Bible House Renovation Plan](https://bryne-ra.github.io/bible-house-reno/)
 
 ### 📄 Pages:
-- **Home:** https://bryne-ra.github.io/bible-house-reno/
-- **Renovation Quotes:** https://bryne-ra.github.io/bible-house-reno/quotes.html
-- **Step-by-Step Guide:** https://bryne-ra.github.io/bible-house-reno/overview.html
-- **Before & After:** https://bryne-ra.github.io/bible-house-reno/beforeafter.html
-- **Complete Single Page:** https://bryne-ra.github.io/bible-house-reno/professional_renovation_plan_complete.html
+- **Home Page** https://bryne-ra.github.io/bible-house-reno/quotes.html
+
 
 ## 📱 Features
 
