@@ -454,63 +454,66 @@ page1_content = f"""<!DOCTYPE html>
         
         <div class="content">
             <div class="section">
-                <h2>Project Overview</h2>
+                <h2>⛪ Church Expansion & Renewal Vision</h2>
                 <div class="info-box">
                     <h3>📊 Project Scope</h3>
-                    <p><strong>Total Budget:</strong> R 730,900</p>
-                    <p><strong>Project Type:</strong> Comprehensive Building Renovation</p>
+                    <p><strong>Total Investment:</strong> R 730,900</p>
+                    <p><strong>Project Type:</strong> Church Expansion & Sacred Space Enhancement</p>
                     <p><strong>Location:</strong> Bible House</p>
                     <p><strong>Timeline:</strong> 8-12 weeks (estimated)</p>
+                    <p><strong>Mission:</strong> Building a sanctuary that welcomes all, sustains worship, and nurtures spiritual growth</p>
                 </div>
                 
-                <h3>🎯 Key Objectives</h3>
+                <h3>🎯 Church-Centered Objectives</h3>
                 <ul>
-                    <li>Complete roof replacement and waterproofing</li>
-                    <li>Full electrical system upgrade</li>
-                    <li>Plumbing system modernization (including 2x 200L solar geysers)</li>
-                    <li>Interior renovations (ceilings, walls, floors)</li>
-                    <li>Professional painting and finishing</li>
-                    <li>New doors and hardware installation</li>
+                    <li><strong>Extending the Main Hall:</strong> Expanding worship space to welcome larger congregations and facilitate community growth</li>
+                    <li><strong>Emergency Worship System:</strong> Ensuring uninterrupted services during power outages through solar backup systems (2x 200L geysers)</li>
+                    <li><strong>Sacred Space Enhancement:</strong> Creating dedicated prayer rooms and improving facilities for spiritual activities</li>
+                    <li><strong>Infrastructure Renewal:</strong> Upgrading electrical, plumbing, and structural systems to support continuous ministry operations</li>
+                    <li><strong>Atmosphere of Worship:</strong> Professional finishing (ceilings, painting, tiling) to create an environment conducive to prayer and spiritual growth</li>
+                    <li><strong>Security & Accessibility:</strong> New doors and hardware ensuring safe, welcoming access for all congregation members</li>
                 </ul>
                 
-                <h3>📋 Project Phases</h3>
+                <h3>📋 Ministry-Focused Implementation Phases</h3>
                 <ol>
-                    <li><strong>Phase 1:</strong> Structural & Exterior (Weeks 1-4)
+                    <li><strong>Phase 1:</strong> Protecting God's House (Weeks 1-4)
                         <ul>
-                            <li>Roof waterproofing and repairs</li>
-                            <li>Exterior painting and preparation</li>
+                            <li>Roof waterproofing - ensuring weatherproof sanctuary for year-round worship</li>
+                            <li>Exterior renewal - creating welcoming first impressions for visitors and members</li>
                         </ul>
                     </li>
-                    <li><strong>Phase 2:</strong> Systems Upgrade (Weeks 3-6)
+                    <li><strong>Phase 2:</strong> Emergency Worship System & Infrastructure (Weeks 3-6)
                         <ul>
-                            <li>Electrical system installation</li>
-                            <li>Plumbing and solar geyser installation</li>
+                            <li>Electrical system upgrade - reliable power for services and ministry activities</li>
+                            <li>Solar geysers installation (2x 200L) - blackout support for uninterrupted worship</li>
+                            <li>Plumbing modernization - supporting fellowship meals and congregation needs</li>
                         </ul>
                     </li>
-                    <li><strong>Phase 3:</strong> Interior Work (Weeks 5-9)
+                    <li><strong>Phase 3:</strong> Enhancing Sacred Spaces (Weeks 5-9)
                         <ul>
-                            <li>Ceiling installation and finishing</li>
-                            <li>Wall preparation and painting</li>
-                            <li>Floor tiling</li>
+                            <li>Ceiling installation - improved acoustics for worship and teaching</li>
+                            <li>Wall preparation and painting - creating peaceful atmosphere for prayer</li>
+                            <li>Floor tiling - durable, clean surfaces for active ministry use</li>
                         </ul>
                     </li>
-                    <li><strong>Phase 4:</strong> Finishing Touches (Weeks 9-12)
+                    <li><strong>Phase 4:</strong> Completing the Sanctuary (Weeks 9-12)
                         <ul>
-                            <li>Door installation</li>
-                            <li>Final painting and touch-ups</li>
-                            <li>Cleanup and inspection</li>
+                            <li>Door installation - security and privacy for prayer rooms and offices</li>
+                            <li>Final touches - polish and excellence worthy of God's house</li>
+                            <li>Dedication and blessing preparation</li>
                         </ul>
                     </li>
                 </ol>
                 
                 <div class="success-box">
-                    <h3>✨ Expected Outcomes</h3>
+                    <h3>✨ Kingdom Impact & Expected Outcomes</h3>
                     <ul>
-                        <li>Fully weatherproof and secure building</li>
-                        <li>Modern, safe electrical and plumbing systems</li>
-                        <li>Professional interior finish</li>
-                        <li>Enhanced property value</li>
-                        <li>Improved energy efficiency with solar geysers</li>
+                        <li><strong>Larger Congregations:</strong> Expanded hall space welcoming more families to worship together</li>
+                        <li><strong>Uninterrupted Ministry:</strong> Emergency power ensuring services continue during blackouts</li>
+                        <li><strong>Sacred Prayer Spaces:</strong> Dedicated rooms for personal communion with God and meditation</li>
+                        <li><strong>Enhanced Worship Atmosphere:</strong> Professional finishes creating environment conducive to spiritual growth</li>
+                        <li><strong>Safe & Welcoming:</strong> Modern infrastructure supporting all ministry activities safely</li>
+                        <li><strong>Generational Legacy:</strong> Building a sanctuary that will serve God's people for years to come</li>
                     </ul>
                 </div>
             </div>
@@ -549,18 +552,21 @@ page2_content = f"""<!DOCTYPE html>
                 <div class="cost-grid">
                     <div class="cost-card">
                         <h3>🏗️ Roof Waterproofing</h3>
+                        <p style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><em>Protecting God's house from the elements</em></p>
                         <div class="cost-item"><span>Labor & Materials</span><span>R 80,000.00</span></div>
                     </div>
                     
                     <div class="cost-card">
-                        <h3>⚡ Electrical</h3>
+                        <h3>⚡ Electrical System</h3>
+                        <p style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><em>Reliable power for services & ministry</em></p>
                         <div class="cost-item"><span>Material</span><span>R 80,000.00</span></div>
                         <div class="cost-item"><span>Labor</span><span>R 40,000.00</span></div>
                         <div class="cost-item"><span><strong>Subtotal</strong></span><span><strong>R 120,000.00</strong></span></div>
                     </div>
                     
                     <div class="cost-card">
-                        <h3>🚰 Plumbing</h3>
+                        <h3>⚡ Emergency Worship System</h3>
+                        <p style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><em>Ensuring uninterrupted worship during blackouts</em></p>
                         <div class="cost-item"><span>Material</span><span>R 95,000.00</span></div>
                         <div class="cost-item"><span>Labor</span><span>R 8,500.00</span></div>
                         <div class="cost-item"><span>Solar Geysers (2x 200L)</span><span>R 35,000.00</span></div>
@@ -568,46 +574,52 @@ page2_content = f"""<!DOCTYPE html>
                     </div>
                     
                     <div class="cost-card">
-                        <h3>🏢 Ceilings</h3>
-                        <div class="cost-item"><span>Material</span><span>R 96,000.00</span></div>
+                        <h3>🏢 Main Hall Extension</h3>
+                        <p style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><em>Welcoming larger congregations</em></p>
+                        <div class="cost-item"><span>Material (Ceiling Boards)</span><span>R 96,000.00</span></div>
                         <div class="cost-item"><span>Labor</span><span>R 24,000.00</span></div>
                         <div class="cost-item"><span><strong>Subtotal</strong></span><span><strong>R 120,000.00</strong></span></div>
                     </div>
                     
                     <div class="cost-card">
-                        <h3>🎨 Painting</h3>
-                        <div class="cost-item"><span>Material</span><span>R 32,000.00</span></div>
-                        <div class="cost-item"><span>Labor</span><span>R 48,000.00</span></div>
+                        <h3>🎨 Sacred Space Atmosphere</h3>
+                        <p style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><em>Creating conducive worship environment</em></p>
+                        <div class="cost-item"><span>Paint Material</span><span>R 32,000.00</span></div>
+                        <div class="cost-item"><span>Professional Labor</span><span>R 48,000.00</span></div>
                         <div class="cost-item"><span><strong>Subtotal</strong></span><span><strong>R 80,000.00</strong></span></div>
                     </div>
                     
                     <div class="cost-card">
-                        <h3>🔲 Tiling</h3>
-                        <div class="cost-item"><span>Material</span><span>R 64,000.00</span></div>
-                        <div class="cost-item"><span>Labor</span><span>R 36,000.00</span></div>
+                        <h3>🔲 Sanctuary Flooring</h3>
+                        <p style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><em>Durable surfaces for active ministry</em></p>
+                        <div class="cost-item"><span>Tiles Material</span><span>R 64,000.00</span></div>
+                        <div class="cost-item"><span>Installation Labor</span><span>R 36,000.00</span></div>
                         <div class="cost-item"><span><strong>Subtotal</strong></span><span><strong>R 100,000.00</strong></span></div>
                     </div>
                     
                     <div class="cost-card">
-                        <h3>🚪 Doors</h3>
-                        <div class="cost-item"><span>Material</span><span>R 11,840.00</span></div>
-                        <div class="cost-item"><span>Labor</span><span>R 6,600.00</span></div>
+                        <h3>🚪 Prayer Rooms & Access</h3>
+                        <p style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><em>Privacy for prayer & secure access</em></p>
+                        <div class="cost-item"><span>Doors Material</span><span>R 11,840.00</span></div>
+                        <div class="cost-item"><span>Installation Labor</span><span>R 6,600.00</span></div>
                         <div class="cost-item"><span><strong>Subtotal</strong></span><span><strong>R 18,440.00</strong></span></div>
                     </div>
                     
                     <div class="cost-card">
-                        <h3>🔧 Miscellaneous</h3>
+                        <h3>🔧 Supporting Infrastructure</h3>
+                        <p style="color: #666; font-size: 0.9em; margin-bottom: 10px;"><em>Windows, demolition & finishing touches</em></p>
                         <div class="cost-item"><span>Window Installation</span><span>R 16,000.00</span></div>
-                        <div class="cost-item"><span>Demolition</span><span>R 20,000.00</span></div>
-                        <div class="cost-item"><span>Sundries</span><span>R 24,000.00</span></div>
+                        <div class="cost-item"><span>Demolition Work</span><span>R 20,000.00</span></div>
+                        <div class="cost-item"><span>Sundries & Materials</span><span>R 24,000.00</span></div>
                         <div class="cost-item"><span>VAT (15%)</span><span>R 13,960.88</span></div>
                         <div class="cost-item"><span><strong>Subtotal</strong></span><span><strong>R 93,960.88</strong></span></div>
                     </div>
                 </div>
                 
                 <div class="success-box" style="margin-top: 30px; text-align: center;">
-                    <h3>💵 GRAND TOTAL</h3>
+                    <h3>💒 Total Investment in God's House</h3>
                     <h2 style="color: #4caf50; font-size: 2.5em;">R 730,900.00</h2>
+                    <p style="margin-top: 15px; font-size: 1.1em;"><em>Building a sanctuary that welcomes all, sustains worship, and nurtures spiritual growth for generations to come</em></p>
                 </div>
             </div>
         </div>
@@ -640,8 +652,12 @@ page3_content = f"""<!DOCTYPE html>
         <div class="content">
             <div class="section">
                 <h2>Material Specifications</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em;">
+                    <em>Quality materials for a sanctuary that will serve generations</em>
+                </p>
                 
-                <h3>🏗️ Roofing Materials</h3>
+                <h3>🏗️ Roofing Materials - Protecting God's House</h3>
+                <p style="color: #666; margin-bottom: 15px;"><em>Weatherproofing to ensure year-round worship without interruption</em></p>
                 <table>
                     <tr>
                         <th>Item</th>
@@ -660,7 +676,8 @@ page3_content = f"""<!DOCTYPE html>
                     </tr>
                 </table>
                 
-                <h3>⚡ Electrical Materials</h3>
+                <h3>⚡ Electrical Materials - Reliable Power for Ministry</h3>
+                <p style="color: #666; margin-bottom: 15px;"><em>Supporting worship services with consistent, safe power infrastructure</em></p>
                 <table>
                     <tr>
                         <th>Item</th>
@@ -689,7 +706,8 @@ page3_content = f"""<!DOCTYPE html>
                     </tr>
                 </table>
                 
-                <h3>🚰 Plumbing Materials</h3>
+                <h3>🚰 Emergency Worship System - Blackout Support</h3>
+                <p style="color: #666; margin-bottom: 15px;"><em>Solar geysers ensuring continuous hot water during power outages</em></p>
                 <table>
                     <tr>
                         <th>Item</th>
@@ -713,7 +731,8 @@ page3_content = f"""<!DOCTYPE html>
                     </tr>
                 </table>
                 
-                <h3>🏢 Ceiling Materials</h3>
+                <h3>🏢 Ceiling Materials - Main Hall Extension</h3>
+                <p style="color: #666; margin-bottom: 15px;"><em>Expanding worship space to welcome larger congregations with quality acoustics</em></p>
                 <table>
                     <tr>
                         <th>Item</th>
@@ -737,7 +756,8 @@ page3_content = f"""<!DOCTYPE html>
                     </tr>
                 </table>
                 
-                <h3>🎨 Paint Specifications</h3>
+                <h3>🎨 Paint Specifications - Creating Sacred Atmosphere</h3>
+                <p style="color: #666; margin-bottom: 15px;"><em>Peaceful colors and durable finishes for prayer rooms and worship halls</em></p>
                 <table>
                     <tr>
                         <th>Area</th>
@@ -761,7 +781,8 @@ page3_content = f"""<!DOCTYPE html>
                     </tr>
                 </table>
                 
-                <h3>🔲 Tiling Materials</h3>
+                <h3>🔲 Tiling Materials - Durable Sanctuary Flooring</h3>
+                <p style="color: #666; margin-bottom: 15px;"><em>Long-lasting surfaces for active ministry and fellowship gatherings</em></p>
                 <table>
                     <tr>
                         <th>Item</th>
@@ -785,7 +806,8 @@ page3_content = f"""<!DOCTYPE html>
                     </tr>
                 </table>
                 
-                <h3>🚪 Door Specifications</h3>
+                <h3>🚪 Door Specifications - Prayer Room Privacy</h3>
+                <p style="color: #666; margin-bottom: 15px;"><em>Secure and private access to sacred spaces</em></p>
                 <table>
                     <tr>
                         <th>Type</th>
@@ -851,104 +873,117 @@ page4_content = f"""<!DOCTYPE html>
         <div class="content">
             <div class="section">
                 <h2>8-12 Week Construction Timeline</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em;">
+                    <em>Phased approach to minimize worship disruptions</em>
+                </p>
                 
                 <div class="timeline-item">
-                    <h4>Week 1-2: Preparation & Roofing</h4>
+                    <h4>Week 1-2: Protecting God's House</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Weatherproofing the sanctuary</em></p>
                     <ul>
                         <li>Site preparation and protection</li>
                         <li>Roof inspection and repairs</li>
-                        <li>Waterproofing application</li>
+                        <li>Waterproofing application for year-round worship</li>
                         <li>First coat of roof sealing</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Week 2-3: Electrical Rough-In</h4>
+                    <h4>Week 2-3: Power for Ministry</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Installing reliable electrical infrastructure</em></p>
                     <ul>
                         <li>Electrical conduit installation</li>
-                        <li>Distribution board setup</li>
+                        <li>Distribution board setup for worship services</li>
                         <li>Cable pulling and routing</li>
-                        <li>First inspection</li>
+                        <li>First safety inspection</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Week 3-4: Plumbing Installation</h4>
+                    <h4>Week 3-4: Emergency Worship System</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Blackout support installation</em></p>
                     <ul>
                         <li>Plumbing pipe installation</li>
-                        <li>Solar geyser mounting (2 units)</li>
-                        <li>Connection of water lines</li>
-                        <li>Pressure testing</li>
+                        <li>Solar geyser mounting (2 x 200L units)</li>
+                        <li>Connection of hot water lines for fellowship meal support</li>
+                        <li>Pressure testing and certification</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Week 4-6: Ceiling Installation</h4>
+                    <h4>Week 4-6: Extending the Main Hall</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Creating space for larger congregations</em></p>
                     <ul>
-                        <li>Steel framework installation</li>
-                        <li>Ceiling board mounting</li>
-                        <li>Cornice installation</li>
+                        <li>Steel framework for hall expansion</li>
+                        <li>Ceiling board mounting for worship acoustics</li>
+                        <li>Cornice installation for finished appearance</li>
                         <li>Ceiling finishing and sanding</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Week 6-7: Electrical Finishing</h4>
+                    <h4>Week 6-7: Lighting for Worship</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Completing electrical and lighting systems</em></p>
                     <ul>
-                        <li>Light fitting installation</li>
-                        <li>Plug and switch installation</li>
+                        <li>Energy-efficient LED light fitting installation</li>
+                        <li>Plug and switch installation for ministry equipment</li>
                         <li>Testing and certification</li>
                         <li>Final electrical inspection</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Week 7-9: Tiling Work</h4>
+                    <h4>Week 7-9: Durable Sanctuary Flooring</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Long-lasting surfaces for active ministry</em></p>
                     <ul>
                         <li>Floor preparation and leveling</li>
-                        <li>Tile laying and alignment</li>
-                        <li>Grouting and sealing</li>
+                        <li>Tile laying and alignment throughout sanctuary</li>
+                        <li>Grouting and sealing for easy maintenance</li>
                         <li>Cleaning and protection</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Week 8-10: Painting</h4>
+                    <h4>Week 8-10: Sacred Space Atmosphere</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Creating peaceful worship environment</em></p>
                     <ul>
                         <li>Wall preparation and priming</li>
-                        <li>Interior wall painting (2 coats)</li>
-                        <li>Ceiling painting (2 coats)</li>
-                        <li>Exterior painting (2 coats)</li>
+                        <li>Interior wall painting in peaceful colors (2 coats)</li>
+                        <li>Ceiling painting for brightness (2 coats)</li>
+                        <li>Exterior painting for welcoming appearance (2 coats)</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Week 10-11: Door Installation</h4>
+                    <h4>Week 10-11: Prayer Room Privacy</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Securing sacred spaces for contemplation</em></p>
                     <ul>
-                        <li>Door frame installation</li>
-                        <li>Door hanging and adjustment</li>
-                        <li>Hardware installation</li>
+                        <li>Door frame installation for prayer rooms</li>
+                        <li>Door hanging and adjustment for privacy</li>
+                        <li>Hardware installation (locks for security)</li>
                         <li>Final adjustments</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <h4>Week 11-12: Final Touches</h4>
+                    <h4>Week 11-12: Dedication Preparation</h4>
+                    <p style="color: #666; margin-bottom: 10px;"><em>Completing the sanctuary for blessing</em></p>
                     <ul>
-                        <li>Touch-up painting</li>
-                        <li>Plumbing fixture installation</li>
-                        <li>Final cleaning</li>
-                        <li>Inspection and handover</li>
+                        <li>Touch-up painting throughout</li>
+                        <li>Plumbing fixture installation (taps, fittings)</li>
+                        <li>Final deep cleaning and consecration preparation</li>
+                        <li>Inspection and handover for worship services</li>
                     </ul>
                 </div>
                 
                 <div class="warning-box">
                     <h3>⚠️ Important Notes</h3>
                     <ul>
-                        <li>Timeline may vary based on weather conditions</li>
-                        <li>Some phases overlap for efficiency</li>
-                        <li>Material availability may affect schedule</li>
-                        <li>Regular progress meetings recommended</li>
+                        <li>Timeline designed to minimize worship disruptions</li>
+                        <li>Some phases overlap for faster completion</li>
+                        <li>Weather conditions may affect outdoor work</li>
+                        <li>Regular updates to church leadership recommended</li>
+                        <li>Flexible scheduling to accommodate special services</li>
                     </ul>
                 </div>
             </div>
@@ -1114,24 +1149,28 @@ page7_content = f"""<!DOCTYPE html>
         <div class="content">
             <div class="section">
                 <h2>Priority-Based Implementation Plan</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em;">
+                    <em>Prioritized by kingdom impact and worship continuity</em>
+                </p>
                 
                 <div class="info-box priority-high">
                     <span class="priority-badge badge-high">🔴 HIGH PRIORITY</span>
-                    <h3>Phase 1: Critical Structural & Safety (Weeks 1-4)</h3>
-                    <p><strong>Budget:</strong> R 200,000</p>
+                    <h3>Phase 1: Protecting & Welcoming (Weeks 1-4)</h3>
+                    <p><strong>Ministry Investment:</strong> R 200,000</p>
+                    <p style="color: #666;"><em>Foundation for year-round worship and safe gatherings</em></p>
                     <ul>
                         <li><strong>Roof Waterproofing (R 80,000)</strong>
                             <ul>
-                                <li>Prevents water damage and structural deterioration</li>
-                                <li>Must be completed before rainy season</li>
-                                <li>Foundation for all interior work</li>
+                                <li>Protects sanctuary from weather - enables year-round worship</li>
+                                <li>Prevents damage to prayer spaces and fellowship areas</li>
+                                <li>Must be completed before rainy season disrupts services</li>
                             </ul>
                         </li>
                         <li><strong>Electrical System Upgrade (R 120,000)</strong>
                             <ul>
-                                <li>Safety critical - prevents fire hazards</li>
-                                <li>Required for all other trades</li>
-                                <li>Must meet current building codes</li>
+                                <li>Reliable power for worship services, lighting, sound systems</li>
+                                <li>Safety critical - protects congregation and equipment</li>
+                                <li>Required for all ministry activities and events</li>
                             </ul>
                         </li>
                     </ul>
@@ -1139,21 +1178,22 @@ page7_content = f"""<!DOCTYPE html>
                 
                 <div class="info-box priority-medium">
                     <span class="priority-badge badge-medium">🟡 MEDIUM PRIORITY</span>
-                    <h3>Phase 2: Systems & Infrastructure (Weeks 3-7)</h3>
-                    <p><strong>Budget:</strong> R 258,500</p>
+                    <h3>Phase 2: Expanding & Sustaining (Weeks 3-7)</h3>
+                    <p><strong>Ministry Investment:</strong> R 258,500</p>
+                    <p style="color: #666;"><em>Ensuring uninterrupted ministry and welcoming larger congregations</em></p>
                     <ul>
-                        <li><strong>Plumbing & Solar Geysers (R 138,500)</strong>
+                        <li><strong>Emergency Worship System & Plumbing (R 138,500)</strong>
                             <ul>
-                                <li>Modern, efficient water system</li>
-                                <li>Solar geysers reduce long-term energy costs</li>
-                                <li>Essential for daily operations</li>
+                                <li>Solar geysers ensure hot water during blackouts (fellowship meals, baptisms)</li>
+                                <li>Uninterrupted worship services regardless of power outages</li>
+                                <li>Long-term cost savings for ministry funds</li>
                             </ul>
                         </li>
-                        <li><strong>Ceiling Installation (R 120,000)</strong>
+                        <li><strong>Main Hall Extension - Ceilings (R 120,000)</strong>
                             <ul>
-                                <li>Improves insulation and appearance</li>
-                                <li>Covers electrical conduits</li>
-                                <li>Prerequisite for painting</li>
+                                <li>Expanding capacity to welcome larger congregations</li>
+                                <li>Improved acoustics for worship music and preaching</li>
+                                <li>Creates inviting atmosphere for new visitors</li>
                             </ul>
                         </li>
                     </ul>
@@ -1161,33 +1201,36 @@ page7_content = f"""<!DOCTYPE html>
                 
                 <div class="info-box priority-low">
                     <span class="priority-badge badge-low">🟢 STANDARD PRIORITY</span>
-                    <h3>Phase 3: Finishing & Aesthetics (Weeks 7-12)</h3>
-                    <p><strong>Budget:</strong> R 272,400</p>
+                    <h3>Phase 3: Enhancing Sacred Spaces (Weeks 7-12)</h3>
+                    <p><strong>Ministry Investment:</strong> R 272,400</p>
+                    <p style="color: #666;"><em>Creating beautiful, durable spaces for prayer and fellowship</em></p>
                     <ul>
-                        <li><strong>Painting (R 80,000)</strong>
+                        <li><strong>Sacred Space Atmosphere - Painting (R 80,000)</strong>
                             <ul>
-                                <li>Protects surfaces and improves appearance</li>
-                                <li>Can be done in phases if needed</li>
-                                <li>Relatively flexible timing</li>
+                                <li>Peaceful colors enhancing worship and prayer environment</li>
+                                <li>Welcoming exterior inviting community participation</li>
+                                <li>Can be phased by room priority if needed</li>
                             </ul>
                         </li>
-                        <li><strong>Tiling (R 100,000)</strong>
+                        <li><strong>Durable Sanctuary Flooring - Tiling (R 100,000)</strong>
                             <ul>
-                                <li>Durable flooring solution</li>
-                                <li>Can be prioritized for high-traffic areas first</li>
-                                <li>Adds property value</li>
+                                <li>Long-lasting surfaces for active ministry and fellowship</li>
+                                <li>Easy maintenance for volunteer cleaning teams</li>
+                                <li>Can prioritize high-traffic worship areas first</li>
                             </ul>
                         </li>
-                        <li><strong>Doors & Hardware (R 18,440)</strong>
+                        <li><strong>Prayer Room Privacy - Doors (R 18,440)</strong>
                             <ul>
-                                <li>Improves security and privacy</li>
-                                <li>Can replace in phases if budget constrained</li>
+                                <li>Secure, private spaces for personal prayer and counseling</li>
+                                <li>Enhanced security for sacred spaces</li>
+                                <li>Can install in phases as budget allows</li>
                             </ul>
                         </li>
-                        <li><strong>Miscellaneous Items (R 73,960.88)</strong>
+                        <li><strong>Supporting Infrastructure (R 73,960.88)</strong>
                             <ul>
-                                <li>Windows, demolition, sundries</li>
-                                <li>Support items for main work</li>
+                                <li>Windows for natural light in prayer spaces</li>
+                                <li>Demolition for hall expansion</li>
+                                <li>Finishing touches for dedication</li>
                             </ul>
                         </li>
                     </ul>
@@ -1195,29 +1238,34 @@ page7_content = f"""<!DOCTYPE html>
                 
                 <div class="success-box">
                     <h3>💡 Budget Flexibility Options</h3>
+                    <p style="color: #666; margin-bottom: 20px;"><em>Phased approach for stewardship and financial planning</em></p>
                     
                     <h4>If Budget Constraints Exist:</h4>
                     <ol>
-                        <li><strong>Minimum Viable Project (R 320,000)</strong>
+                        <li><strong>Minimum Viable Sanctuary (R 320,000)</strong>
                             <ul>
-                                <li>Roof waterproofing</li>
-                                <li>Electrical upgrade</li>
-                                <li>Basic plumbing (without solar geysers)</li>
-                                <li>Essential ceilings only</li>
+                                <li>Roof waterproofing - protects from weather</li>
+                                <li>Electrical upgrade - safe, reliable power for services</li>
+                                <li>Basic plumbing (without solar geysers initially)</li>
+                                <li>Essential ceilings for main worship hall</li>
+                                <li><em>Enables continued worship services with foundational improvements</em></li>
                             </ul>
                         </li>
-                        <li><strong>Phase 2 Addition (+R 218,500)</strong>
+                        <li><strong>Phase 2 Expansion (+R 218,500)</strong>
                             <ul>
-                                <li>Add solar geysers</li>
-                                <li>Complete all ceilings</li>
-                                <li>Basic painting</li>
+                                <li>Add solar geysers for blackout resilience</li>
+                                <li>Complete hall ceiling extension for larger congregations</li>
+                                <li>Basic painting for welcoming atmosphere</li>
+                                <li><em>Enhances capacity and ensures uninterrupted ministry</em></li>
                             </ul>
                         </li>
                         <li><strong>Phase 3 Completion (+R 192,400)</strong>
                             <ul>
-                                <li>Full painting</li>
-                                <li>Complete tiling</li>
-                                <li>Doors and finishing</li>
+                                <li>Full painting for peaceful sacred atmosphere</li>
+                                <li>Complete tiling for durable ministry spaces</li>
+                                <li>Doors for prayer room privacy and security</li>
+                                <li>Final touches for dedication and blessing ceremony</li>
+                                <li><em>Creates beautiful, lasting sanctuary for generations</em></li>
                             </ul>
                         </li>
                     </ol>
@@ -1226,11 +1274,12 @@ page7_content = f"""<!DOCTYPE html>
                 <div class="warning-box">
                     <h3>⚠️ Critical Considerations</h3>
                     <ul>
-                        <li><strong>Don't compromise on:</strong> Roof waterproofing and electrical safety</li>
-                        <li><strong>Best ROI:</strong> Solar geysers pay for themselves in 3-5 years</li>
-                        <li><strong>Weather dependent:</strong> Complete roofing before rainy season</li>
-                        <li><strong>Code compliance:</strong> All electrical and plumbing work must be certified</li>
-                        <li><strong>Sequence matters:</strong> Some work must follow specific order</li>
+                        <li><strong>Don't compromise on:</strong> Roof waterproofing (protects year-round worship) and electrical safety (protects congregation)</li>
+                        <li><strong>Best stewardship ROI:</strong> Solar geysers pay for themselves in 3-5 years, freeing funds for ministry</li>
+                        <li><strong>Weather dependent:</strong> Complete roofing before rainy season to avoid worship disruptions</li>
+                        <li><strong>Code compliance:</strong> All electrical and plumbing certified for congregation safety</li>
+                        <li><strong>Ministry sequence:</strong> Phased to minimize service interruptions and maintain weekly worship</li>
+                        <li><strong>Kingdom impact:</strong> Investment creates generational blessing for community</li>
                     </ul>
                 </div>
                 

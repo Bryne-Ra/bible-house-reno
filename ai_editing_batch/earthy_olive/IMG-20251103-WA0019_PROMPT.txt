@@ -1,0 +1,23 @@
+IMAGE: IMG-20251103-WA0019.jpg
+PALETTE: Earthy Olive Accent
+
+============================================================
+AI REPAINT PROMPT:
+============================================================
+
+Walls light khaki; trims white; muted olive accent optional.
+
+============================================================
+NEGATIVE PROMPT:
+============================================================
+
+no added furniture, no texture overlays, no lighting changes, no floor changes
+
+============================================================
+
+INSTRUCTIONS:
+1. Upload this image to your AI tool
+2. Use inpainting/masking to select walls & trim
+3. Paste the prompt above
+4. Add negative prompt if supported
+5. Generate and save as: IMG-20251103-WA0019_after.jpg

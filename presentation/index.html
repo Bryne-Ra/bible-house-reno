@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bible House Renovation Paint Concepts - 3 professional color palettes with 12 room transformations">
+    <meta name="author" content="Karagelo Projects">
+    <title>Bible House Renovation - Paint Concepts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #718096;
+            font-size: 1.2em;
+        }
+        
+        .estimate-summary {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .estimate-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .estimate-card h3 {
+            margin-bottom: 10px;
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .estimate-card .value {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .palettes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .palette-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .palette-card h2 {
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        
+        .color-swatches {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .swatch {
+            flex: 1;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 8px;
+            color: white;
+            font-size: 0.8em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .room-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .room-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .room-info {
+            padding: 20px;
+        }
+        
+        .room-info h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .prompt-section {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .prompt-section h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+        
+        .prompt-text {
+            font-size: 0.85em;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .tab {
+            padding: 8px 16px;
+            border: none;
+            background: #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        
+        .tab:hover {
+            background: #cbd5e0;
+        }
+        
+        .tab.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .prompt-content {
+            display: none;
+        }
+        
+        .prompt-content.active {
+            display: block;
+        }
+        
+        .materials {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        .materials h2 {
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .materials ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .materials li {
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 8px;
+            border-left: 4px solid #48bb78;
+        }
+        
+        footer {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            color: #718096;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Bible House Renovation</h1>
+            <p class="subtitle">Professional Paint Transformation Concepts</p>
+        </header>
+        
+        <div class="estimate-summary">
+            <div class="estimate-card">
+                <h3>Estimate Number</h3>
+                <div class="value">#40</div>
+            </div>
+            <div class="estimate-card">
+                <h3>Date</h3>
+                <div class="value">26 Oct 2025</div>
+            </div>
+            <div class="estimate-card">
+                <h3>Total Investment</h3>
+                <div class="value">R 95,600</div>
+            </div>
+            <div class="estimate-card">
+                <h3>Scope</h3>
+                <div class="value">Interior + Exterior</div>
+            </div>
+        </div>
+        
+        <div class="materials">
+            <h2>🎨 Specified Materials</h2>
+            <ul>
+                <li><strong>Micatex 20L</strong> - Premium exterior paint</li>
+                <li><strong>Primer (solvent-based)</strong> - For optimal adhesion</li>
+                <li><strong>Crack Filling</strong> - Surface preparation</li>
+            </ul>
+        </div>
+        
+        <h2 style="color: white; text-align: center; margin-bottom: 20px; font-size: 2em;">Color Palettes</h2>
+        
+        <div class="palettes">
+            <div class="palette-card">
+                <h2>🌾 Warm Neutral Refresh</h2>
+                <p>Classic elegance with timeless appeal. Perfect for creating a welcoming, cozy atmosphere.</p>
+                <div class="color-swatches">
+                    <div class="swatch" style="background: #E8DCC8;">
+                        <div>Walls</div>
+                        <div>#E8DCC8</div>
+                    </div>
+                    <div class="swatch" style="background: #F7F7F7; color: #333;">
+                        <div>Ceiling</div>
+                        <div>#F7F7F7</div>
+                    </div>
+                    <div class="swatch" style="background: #FFFFFF; color: #333; border: 1px solid #ddd;">
+                        <div>Trim</div>
+                        <div>#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="palette-card">
+                <h2>🏢 Modern Gray + Navy</h2>
+                <p>Contemporary sophistication with an optional bold accent for visual interest.</p>
+                <div class="color-swatches">
+                    <div class="swatch" style="background: #E6E9ED; color: #333;">
+                        <div>Walls</div>
+                        <div>#E6E9ED</div>
+                    </div>
+                    <div class="swatch" style="background: #F7F7F7; color: #333;">
+                        <div>Ceiling</div>
+                        <div>#F7F7F7</div>
+                    </div>
+                    <div class="swatch" style="background: #1F3A5F;">
+                        <div>Accent</div>
+                        <div>#1F3A5F</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="palette-card">
+                <h2>🌿 Earthy Olive Accent</h2>
+                <p>Natural warmth with organic tones that connect indoor spaces with nature.</p>
+                <div class="color-swatches">
+                    <div class="swatch" style="background: #D9C5A1;">
+                        <div>Walls</div>
+                        <div>#D9C5A1</div>
+                    </div>
+                    <div class="swatch" style="background: #F7F7F7; color: #333;">
+                        <div>Ceiling</div>
+                        <div>#F7F7F7</div>
+                    </div>
+                    <div class="swatch" style="background: #5A6A4F;">
+                        <div>Accent</div>
+                        <div>#5A6A4F</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="color: white; text-align: center; margin: 40px 0 20px; font-size: 2em;">Room Transformations</h2>
+        
+        <div class="gallery" id="gallery">
+            <!-- Gallery will be populated by JavaScript -->
+        </div>
+        
+        <footer>
+            <p><strong>AI Repaint Instructions:</strong> Upload each "before" photo to your preferred AI image editor (Microsoft Designer, Adobe Firefly, or Midjourney). Copy the corresponding prompt for your chosen palette. Use inpainting/masking to select only walls and trim. Generate the "after" image.</p>
+            <p style="margin-top: 10px;"><em>All prompts preserve floors, windows, fixtures, and lighting. Only paint colors change.</em></p>
+        </footer>
+    </div>
+    
+    <script>
+        const rooms = [
+            {
+                image: '../before and after pictures/pic1b4.jpg.jpg',
+                title: 'Living Room',
+                prompts: {
+                    warm_neutral: 'Repaint all walls to warm beige (#E8DCC8), keep ceiling soft white (#F7F7F7), and paint trims/doors pure white (#FFFFFF). Wall finish matte/eggshell; trims satin. Preserve floors, windows, and lighting.',
+                    modern_gray: 'Repaint walls light gray (#E6E9ED) with crisp white trims (#FFFFFF) and ceiling soft white (#F7F7F7). Add a single accent wall in deep navy (#1F3A5F) on the wall with the least openings.',
+                    earthy_olive: 'Repaint walls light khaki (#D9C5A1), trims/doors white (#FFFFFF), ceiling soft white (#F7F7F7). Optional small accent area in muted olive (#5A6A4F).'
+                }
+            },
+            {
+                image: '../before and after pictures/pic2b4.jpg.jpg',
+                title: 'Kitchen',
+                prompts: {
+                    warm_neutral: 'Apply warm beige (#E8DCC8) to walls, keep ceiling soft white (#F7F7F7), trims white (#FFFFFF). Maintain existing textures and edges cleanly.',
+                    modern_gray: 'Walls light gray (#E6E9ED), trims white (#FFFFFF), ceiling soft white (#F7F7F7). Consider a small navy (#1F3A5F) accent if layout supports it.',
+                    earthy_olive: 'Walls light khaki (#D9C5A1), trims white, ceiling soft white; subtle olive (#5A6A4F) accent permitted.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic3b4.jpg.jpg',
+                title: 'Dining Area',
+                prompts: {
+                    warm_neutral: 'Warm beige walls (#E8DCC8), white trims (#FFFFFF), soft white ceiling (#F7F7F7); matte walls, satin trims.',
+                    modern_gray: 'Light gray walls (#E6E9ED), white trims, soft white ceiling; optional navy accent (#1F3A5F).',
+                    earthy_olive: 'Light khaki walls (#D9C5A1), white trims, soft white ceiling; olive accent (#5A6A4F) optional.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic4b4.jpg.jpg',
+                title: 'Master Bedroom',
+                prompts: {
+                    warm_neutral: 'Repaint walls warm beige, trims white, ceiling soft white; keep fixtures/floors unchanged.',
+                    modern_gray: 'Repaint walls light gray with crisp white trims; optional single navy accent wall.',
+                    earthy_olive: 'Repaint walls light khaki, trims white; small olive feature if composition allows.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic4b42.jpg.jpg',
+                title: 'Bedroom 2',
+                prompts: {
+                    warm_neutral: 'Warm beige walls, white trims/doors, soft white ceiling; matte vs satin finishes as noted.',
+                    modern_gray: 'Light gray walls, white trims; optional navy accent.',
+                    earthy_olive: 'Light khaki walls, white trims; olive accent optional.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic6b4.jpg.jpg',
+                title: 'Bedroom 3',
+                prompts: {
+                    warm_neutral: 'Walls warm beige, trims white, ceiling soft white; preserve window frames and floors.',
+                    modern_gray: 'Walls light gray, trims white, ceiling soft white; consider navy accent if suitable.',
+                    earthy_olive: 'Walls light khaki, trims white; olive accent optional.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic7b4.jpg.jpg',
+                title: 'Bathroom',
+                prompts: {
+                    warm_neutral: 'Repaint walls warm beige; trims/doors white; ceiling soft white; no structural changes.',
+                    modern_gray: 'Walls light gray; trims white; optional deep navy accent.',
+                    earthy_olive: 'Walls light khaki; trims white; muted olive accent optional.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic8b4.jpg.jpg',
+                title: 'Kids Playroom',
+                prompts: {
+                    warm_neutral: 'Warm beige walls; white trims; soft white ceiling.',
+                    modern_gray: 'Light gray walls; white trims; optional navy accent.',
+                    earthy_olive: 'Light khaki walls; white trims; optional olive accent.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic1b4.jpg.jpg',
+                title: 'Hallway',
+                prompts: {
+                    warm_neutral: 'Warm beige walls; white trims/doors; soft white ceiling; preserve floors and windows.',
+                    modern_gray: 'Light gray walls; white trims; soft white ceiling; navy accent optional.',
+                    earthy_olive: 'Light khaki walls; white trims; soft white ceiling; olive accent optional.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic2b4.jpg.jpg',
+                title: 'Entry Area',
+                prompts: {
+                    warm_neutral: 'Warm beige walls; white trims; clean edges; no object changes.',
+                    modern_gray: 'Light gray walls; white trims; navy accent optional; keep geometry intact.',
+                    earthy_olive: 'Light khaki walls; white trims; subtle olive accent possible.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic6b42.jpg.jpg',
+                title: 'Laundry Room',
+                prompts: {
+                    warm_neutral: 'Warm beige walls; white trims; soft white ceiling; matte walls; satin trims.',
+                    modern_gray: 'Light gray walls; white trims; optional navy accent; soft white ceiling.',
+                    earthy_olive: 'Light khaki walls; white trims; optional olive accent; soft white ceiling.'
+                }
+            },
+            {
+                image: '../before and after pictures/pic8b42.jpg.jpg',
+                title: 'Study/Office',
+                prompts: {
+                    warm_neutral: 'Warm beige walls; white trims; soft white ceiling; keep floors/windows unchanged.',
+                    modern_gray: 'Light gray walls; white trims; soft white ceiling; optional navy accent.',
+                    earthy_olive: 'Light khaki walls; white trims; soft white ceiling; optional olive accent.'
+                }
+            }
+        ];
+        
+        const gallery = document.getElementById('gallery');
+        
+        rooms.forEach((room, index) => {
+            const card = document.createElement('div');
+            card.className = 'room-card';
+            card.innerHTML = `
+                <img src="${room.image}" alt="${room.title}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect fill=%22%23ddd%22 width=%22400%22 height=%22250%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22 font-family=%22sans-serif%22 font-size=%2218%22%3EImage: ${room.title}%3C/text%3E%3C/svg%3E'">
+                <div class="room-info">
+                    <h3>${room.title}</h3>
+                    <div class="tabs">
+                        <button class="tab active" onclick="showPrompt(${index}, 'warm_neutral')">🌾 Warm Neutral</button>
+                        <button class="tab" onclick="showPrompt(${index}, 'modern_gray')">🏢 Modern Gray</button>
+                        <button class="tab" onclick="showPrompt(${index}, 'earthy_olive')">🌿 Earthy Olive</button>
+                    </div>
+                    <div class="prompt-section">
+                        <h4>AI Repaint Prompt:</h4>
+                        <div class="prompt-content active" data-room="${index}" data-palette="warm_neutral">
+                            <p class="prompt-text">${room.prompts.warm_neutral}</p>
+                        </div>
+                        <div class="prompt-content" data-room="${index}" data-palette="modern_gray">
+                            <p class="prompt-text">${room.prompts.modern_gray}</p>
+                        </div>
+                        <div class="prompt-content" data-room="${index}" data-palette="earthy_olive">
+                            <p class="prompt-text">${room.prompts.earthy_olive}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            gallery.appendChild(card);
+        });
+        
+        function showPrompt(roomIndex, palette) {
+            // Update tabs
+            const card = gallery.children[roomIndex];
+            const tabs = card.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update prompt content
+            const contents = card.querySelectorAll('.prompt-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+                if (content.dataset.palette === palette) {
+                    content.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

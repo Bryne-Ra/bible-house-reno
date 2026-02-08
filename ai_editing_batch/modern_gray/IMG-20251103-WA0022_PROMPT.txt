@@ -1,0 +1,23 @@
+IMAGE: IMG-20251103-WA0022.jpg
+PALETTE: Modern Gray + Optional Navy Accent
+
+============================================================
+AI REPAINT PROMPT:
+============================================================
+
+Light gray walls; white trims; navy accent optional; keep geometry intact.
+
+============================================================
+NEGATIVE PROMPT:
+============================================================
+
+no added furniture, no texture overlays, no lighting changes, no floor changes
+
+============================================================
+
+INSTRUCTIONS:
+1. Upload this image to your AI tool
+2. Use inpainting/masking to select walls & trim
+3. Paste the prompt above
+4. Add negative prompt if supported
+5. Generate and save as: IMG-20251103-WA0022_after.jpg

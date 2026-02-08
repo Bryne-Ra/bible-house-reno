@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bible House Renovation Complete Presentation - R 95,600 professional renovation by Karagelo Projects">
+    <meta name="author" content="Karagelo Projects">
+    <title>Bible House Renovation - Complete Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 15px 25px;
+            margin: 0 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .tab-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        .tab-content {
+            display: none;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .cost-summary {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .cost-summary h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .cost-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cost-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cost-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .room-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .room-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .comparison-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            cursor: ew-resize;
+        }
+
+        .before-image, .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .after-image {
+            clip-path: inset(0 50% 0 0);
+        }
+
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: white;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .slider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .slider-labels {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+
+        .palette-selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .palette-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .palette-btn.active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .floor-plan {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .floor-plan iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .prompt-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .prompt-section h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .room-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .tab-btn {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 Bible House Renovation</h1>
+            <p>Complete Before & After Presentation with Cost Analysis</p>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="showTab('overview')">Overview</button>
+            <button class="tab-btn" onclick="showTab('comparisons')">Before/After</button>
+            <button class="tab-btn" onclick="showTab('costs')">Cost Breakdown</button>
+            <button class="tab-btn" onclick="showTab('documents')">Documents</button>
+            <button class="tab-btn" onclick="showTab('landscaping')">Landscaping Costs</button>
+            <button class="tab-btn" onclick="showTab('floorplan')">Floor Plan</button>
+        </div>
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <div class="cost-summary">
+                <h2>R 95,600</h2>
+                <p>Total Renovation Cost - Estimate #40</p>
+                <div class="cost-breakdown">
+                    <div class="cost-item">
+                        <h3>Interior Painting</h3>
+                        <p>Extension & interior painting (incl. materials)</p>
+                        <p>Kids playroom walls & ceiling</p>
+                    </div>
+                    <div class="cost-item">
+                        <h3>Exterior Work</h3>
+                        <p>Roof painting & waterproofing</p>
+                        <p>Exterior walls painting</p>
+                        <p>Primer & crack filling</p>
+                    </div>
+                    <div class="cost-item">
+                        <h3>Materials</h3>
+                        <p>Micatex 20L</p>
+                        <p>Primer (solvent-based)</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="text-align: center; margin: 30px 0; color: #667eea;">Project Overview</h2>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px;">
+                This comprehensive exterior renovation includes professional house painting (420 m²) using premium Micatex materials.
+                The project covers complete exterior transformation with three beautiful color palette options.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #667eea;">8 Views</h3>
+                    <p>Complete exterior transformation documentation</p>
+                </div>
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #667eea;">3 Palettes</h3>
+                    <p>Warm Neutral, Modern Gray, and Earthy Olive options</p>
+                </div>
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #667eea;">Premium Materials</h3>
+                    <p>Micatex 20L with professional primer application</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before/After Comparisons Tab -->
+        <div id="comparisons" class="tab-content">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #667eea;">Before & After Comparisons</h2>
+
+            <div class="palette-selector">
+                <button class="palette-btn active" onclick="setPalette('warm_neutral')" style="background: linear-gradient(135deg, #E8DCC8 0%, #D4C5A9 100%); color: #333;">Warm Neutral</button>
+                <button class="palette-btn" onclick="setPalette('modern_gray')" style="background: linear-gradient(135deg, #E6E9ED 0%, #C8CFD6 100%); color: #333;">Modern Gray</button>
+                <button class="palette-btn" onclick="setPalette('earthy_olive')" style="background: linear-gradient(135deg, #D9C5A1 0%, #B8A88A 100%); color: #333;">Earthy Olive</button>
+            </div>
+
+            <div class="room-grid" id="roomComparisons">
+                <!-- Rooms will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Cost Breakdown Tab -->
+        <div id="costs" class="tab-content">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Detailed Cost Breakdown</h2>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <h3 style="color: #667eea; margin-bottom: 20px;">Estimate Details</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                        <h4>📋 Estimate Number</h4>
+                        <p style="font-size: 1.2em; font-weight: bold; color: #667eea;">#40</p>
+                    </div>
+                    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                        <h4>📅 Date</h4>
+                        <p style="font-size: 1.2em; font-weight: bold; color: #667eea;">26 October 2025</p>
+                    </div>
+                    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                        <h4>🏢 Contractor</h4>
+                        <p style="font-size: 1.2em; font-weight: bold; color: #667eea;">Karagelo Projects</p>
+                    </div>
+                    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                        <h4>💰 Total Cost</h4>
+                        <p style="font-size: 1.2em; font-weight: bold; color: #667eea;">R 95,600</p>
+                    </div>
+                </div>
+
+                <h3 style="color: #667eea; margin: 30px 0 20px 0;">Scope of Work</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
+                        <h4>🏠 Interior Work</h4>
+                        <ul style="margin-top: 10px;">
+                            <li>• Extension & interior painting (incl. materials)</li>
+                            <li>• Kids playroom walls & ceiling</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border-radius: 10px;">
+                        <h4>🏡 Exterior Work</h4>
+                        <ul style="margin-top: 10px;">
+                            <li>• Roof painting & waterproofing</li>
+                            <li>• Exterior walls painting (outside)</li>
+                            <li>• Roof materials</li>
+                            <li>• Primer & crack filling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="color: #667eea; margin: 30px 0 20px 0;">Materials Included</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                    <div style="padding: 15px; background: #e8f4f8; border-radius: 8px; border-left: 4px solid #667eea;">
+                        <strong>Micatex 20L</strong> - Premium exterior paint
+                    </div>
+                    <div style="padding: 15px; background: #e8f4f8; border-radius: 8px; border-left: 4px solid #667eea;">
+                        <strong>Primer (solvent-based)</strong> - Professional preparation
+                    </div>
+                </div>
+
+                <h3 style="color: #667eea; margin: 30px 0 20px 0;">🎪 Optional Playground Packages (Estimate #41)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 25px; margin-bottom: 30px;">
+                    <div style="padding: 25px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                        <h4 style="font-size: 1.3em; margin-bottom: 15px;">🌳 Wooden Den Package</h4>
+                        <p style="font-size: 2em; font-weight: bold; margin: 15px 0;">R 42,500</p>
+                        <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                            <p><strong>Includes:</strong></p>
+                            <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                                <li>Wooden jungle gym structure</li>
+                                <li>Ground work & leveling (R 7,500)</li>
+                                <li>60m² Kikuyu lawn (R 2,100-3,000)</li>
+                                <li>Irrigation system (R 6,000)</li>
+                                <li>Rubble removal (R 6,400)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="padding: 25px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                        <h4 style="font-size: 1.3em; margin-bottom: 15px;">🎨 Plastic Timber Package</h4>
+                        <p style="font-size: 2em; font-weight: bold; margin: 15px 0;">R 64,500</p>
+                        <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                            <p><strong>Includes:</strong></p>
+                            <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                                <li>Plastic timber jungle gym (premium)</li>
+                                <li>Ground work & leveling (R 7,500)</li>
+                                <li>60m² Instant lawn (R 2,700-3,900)</li>
+                                <li>Irrigation system (R 6,000)</li>
+                                <li>Rubble removal (R 6,400)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="color: #667eea; margin: 30px 0 20px 0;">🌿 Custom Landscaping Add-Ons</h3>
+                <div style="background: #f0fff4; padding: 25px; border-radius: 15px; border-left: 5px solid #48bb78; margin-bottom: 20px;">
+                    <h4 style="color: #2f855a; margin-bottom: 15px;">Lawn Installation Options (per m²)</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2f855a;">Kikuyu Grass</strong>
+                            <p style="font-size: 1.3em; color: #38a169; margin: 8px 0;">R 35-50/m²</p>
+                            <p style="font-size: 0.85em; color: #666;">100m² = R 3,500-5,000</p>
+                        </div>
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2f855a;">Instant Lawn</strong>
+                            <p style="font-size: 1.3em; color: #38a169; margin: 8px 0;">R 45-65/m²</p>
+                            <p style="font-size: 0.85em; color: #666;">100m² = R 4,500-6,500</p>
+                        </div>
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2f855a;">Buffalo Grass</strong>
+                            <p style="font-size: 1.3em; color: #38a169; margin: 8px 0;">R 55-75/m²</p>
+                            <p style="font-size: 0.85em; color: #666;">100m² = R 5,500-7,500</p>
+                        </div>
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2f855a;">Artificial Grass</strong>
+                            <p style="font-size: 1.3em; color: #38a169; margin: 8px 0;">R 180-350/m²</p>
+                            <p style="font-size: 0.85em; color: #666;">100m² = R 18,000-35,000</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; color: #2f855a; font-size: 0.9em;">💡 Add installation labor: R 50-80/m² | Irrigation: R 6,000 for basic system</p>
+                </div>
+
+                <div style="background: #ebf8ff; padding: 25px; border-radius: 15px; border-left: 5px solid #3182ce;">
+                    <h4 style="color: #2b6cb0; margin-bottom: 15px;">🪑 Park Bench Options</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2b6cb0;">Treated Pine Bench</strong>
+                            <p style="font-size: 1.3em; color: #3182ce; margin: 8px 0;">R 1,500-3,500</p>
+                            <p style="font-size: 0.85em; color: #666;">1.5-2m length</p>
+                        </div>
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2b6cb0;">Steel/Metal Bench</strong>
+                            <p style="font-size: 1.3em; color: #3182ce; margin: 8px 0;">R 2,500-5,500</p>
+                            <p style="font-size: 0.85em; color: #666;">Modern design</p>
+                        </div>
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2b6cb0;">Concrete Bench</strong>
+                            <p style="font-size: 1.3em; color: #3182ce; margin: 8px 0;">R 3,000-6,000</p>
+                            <p style="font-size: 0.85em; color: #666;">Permanent install</p>
+                        </div>
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2b6cb0;">Recycled Plastic</strong>
+                            <p style="font-size: 1.3em; color: #3182ce; margin: 8px 0;">R 3,500-7,500</p>
+                            <p style="font-size: 0.85em; color: #666;">Eco-friendly</p>
+                        </div>
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2b6cb0;">Picnic Table Set</strong>
+                            <p style="font-size: 1.3em; color: #3182ce; margin: 8px 0;">R 4,500-9,000</p>
+                            <p style="font-size: 0.85em; color: #666;">Table + 2 benches</p>
+                        </div>
+                        <div style="padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #2b6cb0;">Custom Hardwood</strong>
+                            <p style="font-size: 1.3em; color: #3182ce; margin: 8px 0;">R 5,000-12,000</p>
+                            <p style="font-size: 0.85em; color: #666;">Premium quality</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; color: #2b6cb0; font-size: 0.9em;">💡 Concrete benches require professional installation: +R 800-1,500</p>
+                </div>
+
+                <h3 style="color: #667eea; margin: 30px 0 20px 0;">🪑 9 Picnic Tables with Benches - Outdoor Dining Area</h3>
+                <div style="background: #fff9e6; padding: 25px; border-radius: 15px; border-left: 5px solid #fbbf24; margin-bottom: 30px;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">Complete Picnic Table Sets (Table + 2 Benches Each)</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #92400e; font-size: 1.2em;">Pine Picnic Sets</strong>
+                            <p style="font-size: 1.1em; color: #b45309; margin: 10px 0;">R 4,500-6,500 per set</p>
+                            <p style="font-size: 1.5em; font-weight: bold; color: #d97706; margin: 10px 0;">9 Tables: R 40,500-58,500</p>
+                            <p style="font-size: 0.9em; color: #78350f;">Treated pine, 1.8m length<br>Weather-resistant coating</p>
+                        </div>
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #92400e; font-size: 1.2em;">Steel Frame Picnic Sets</strong>
+                            <p style="font-size: 1.1em; color: #b45309; margin: 10px 0;">R 6,500-9,500 per set</p>
+                            <p style="font-size: 1.5em; font-weight: bold; color: #d97706; margin: 10px 0;">9 Tables: R 58,500-85,500</p>
+                            <p style="font-size: 0.9em; color: #78350f;">Powder-coated steel frame<br>Wood/composite top & benches</p>
+                        </div>
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="color: #92400e; font-size: 1.2em;">Hardwood Picnic Sets</strong>
+                            <p style="font-size: 1.1em; color: #b45309; margin: 10px 0;">R 8,000-12,000 per set</p>
+                            <p style="font-size: 1.5em; font-weight: bold; color: #d97706; margin: 10px 0;">9 Tables: R 72,000-108,000</p>
+                            <p style="font-size: 0.9em; color: #78350f;">Premium teak/meranti wood<br>Extra-durable, elegant finish</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px; padding: 15px; background: #fef3c7; border-radius: 8px;">
+                        <p style="color: #92400e; margin-bottom: 8px;"><strong>Additional Costs for 9 Tables:</strong></p>
+                        <ul style="color: #78350f; margin-left: 20px; line-height: 1.8;">
+                            <li>Delivery (9 units): R 2,500-4,000</li>
+                            <li>Installation/Assembly: R 300-500 per table (R 2,700-4,500 total)</li>
+                            <li>Ground anchoring (optional): R 200-400 per table (R 1,800-3,600 total)</li>
+                            <li>💡 Bulk discount: 10-15% available for 9+ units</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="color: #667eea; margin: 30px 0 20px 0;">🌿 90m² Lawn Installation - Complete Breakdown</h3>
+                <div style="background: #f0fdf4; padding: 25px; border-radius: 15px; border-left: 5px solid #10b981; margin-bottom: 30px;">
+                    <h4 style="color: #065f46; margin-bottom: 15px;">Professional Grass Installation (90 Square Meters)</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 3px solid #10b981;">
+                            <strong style="color: #065f46; font-size: 1.2em;">Kikuyu Grass (Budget Option)</strong>
+                            <div style="margin: 15px 0; padding: 10px; background: #d1fae5; border-radius: 6px;">
+                                <p style="color: #047857; margin: 5px 0;">Material: R 3,150-4,500 (R 35-50/m²)</p>
+                                <p style="color: #047857; margin: 5px 0;">Labor: R 5,850 (R 65/m²)</p>
+                                <p style="color: #047857; margin: 5px 0;">Delivery: R 800-1,200</p>
+                                <p style="color: #047857; margin: 5px 0;">Soil prep: R 2,700 (30mm topsoil)</p>
+                            </div>
+                            <p style="font-size: 1.6em; font-weight: bold; color: #10b981; text-align: center; margin-top: 10px;">R 12,500-14,250</p>
+                            <p style="font-size: 0.85em; color: #065f46; text-align: center;">Hardy & drought-resistant</p>
+                        </div>
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 3px solid #34d399;">
+                            <strong style="color: #065f46; font-size: 1.2em;">Instant Lawn (Standard Option)</strong>
+                            <div style="margin: 15px 0; padding: 10px; background: #d1fae5; border-radius: 6px;">
+                                <p style="color: #047857; margin: 5px 0;">Material: R 4,050-5,850 (R 45-65/m²)</p>
+                                <p style="color: #047857; margin: 5px 0;">Labor: R 6,300 (R 70/m²)</p>
+                                <p style="color: #047857; margin: 5px 0;">Delivery: R 1,000-1,500</p>
+                                <p style="color: #047857; margin: 5px 0;">Soil prep: R 2,700 (30mm topsoil)</p>
+                            </div>
+                            <p style="font-size: 1.6em; font-weight: bold; color: #10b981; text-align: center; margin-top: 10px;">R 14,050-16,350</p>
+                            <p style="font-size: 0.85em; color: #065f46; text-align: center;">Premium LM grass, instant coverage</p>
+                        </div>
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 3px solid #059669;">
+                            <strong style="color: #065f46; font-size: 1.2em;">Buffalo Grass (Premium Option)</strong>
+                            <div style="margin: 15px 0; padding: 10px; background: #d1fae5; border-radius: 6px;">
+                                <p style="color: #047857; margin: 5px 0;">Material: R 4,950-6,750 (R 55-75/m²)</p>
+                                <p style="color: #047857; margin: 5px 0;">Labor: R 6,750 (R 75/m²)</p>
+                                <p style="color: #047857; margin: 5px 0;">Delivery: R 1,200-1,800</p>
+                                <p style="color: #047857; margin: 5px 0;">Soil prep: R 2,700 (30mm topsoil)</p>
+                            </div>
+                            <p style="font-size: 1.6em; font-weight: bold; color: #10b981; text-align: center; margin-top: 10px;">R 15,600-18,000</p>
+                            <p style="font-size: 0.85em; color: #065f46; text-align: center;">Shade-tolerant, low maintenance</p>
+                        </div>
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 3px solid #6366f1;">
+                            <strong style="color: #065f46; font-size: 1.2em;">Artificial Grass (Maintenance-Free)</strong>
+                            <div style="margin: 15px 0; padding: 10px; background: #e0e7ff; border-radius: 6px;">
+                                <p style="color: #4338ca; margin: 5px 0;">Material: R 16,200-31,500 (R 180-350/m²)</p>
+                                <p style="color: #4338ca; margin: 5px 0;">Labor: R 10,800 (R 120/m²)</p>
+                                <p style="color: #4338ca; margin: 5px 0;">Delivery: R 1,500-2,500</p>
+                                <p style="color: #4338ca; margin: 5px 0;">Base prep: R 4,500 (compacted stone)</p>
+                            </div>
+                            <p style="font-size: 1.6em; font-weight: bold; color: #6366f1; text-align: center; margin-top: 10px;">R 33,000-49,300</p>
+                            <p style="font-size: 0.85em; color: #4338ca; text-align: center;">Zero maintenance, 10+ year lifespan</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px; padding: 15px; background: #ecfdf5; border-radius: 8px;">
+                        <p style="color: #065f46; margin-bottom: 8px;"><strong>💡 Professional Installation Notes:</strong></p>
+                        <ul style="color: #047857; margin-left: 20px; line-height: 1.8;">
+                            <li>All prices include professional installation and site preparation</li>
+                            <li>Labor rates: R 65-75/m² for natural grass, R 120/m² for artificial</li>
+                            <li>Delivery costs based on 50km radius from supplier</li>
+                            <li>Soil preparation: 30mm topsoil layer for natural grass</li>
+                            <li>Artificial grass: Requires compacted stone base preparation</li>
+                            <li>Optional: Irrigation system R 6,000-7,500 (recommended for natural grass)</li>
+                            <li>Optional: Outdoor lighting R 4,500-6,000 for evening use</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; padding: 30px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: #1e3a8a; margin-bottom: 20px; text-align: center;">💰 Complete Package Totals with 9 Picnic Tables & 90m² Grass</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
+                        <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #f59e0b;">
+                            <h4 style="color: #92400e; margin-bottom: 15px; font-size: 1.3em;">Budget Package</h4>
+                            <ul style="color: #78350f; line-height: 2; margin-left: 20px;">
+                                <li><strong>Main renovation:</strong> R 95,600</li>
+                                <li><strong>Wooden playground:</strong> R 42,500</li>
+                                <li><strong>9 Pine picnic tables:</strong> R 40,500-58,500</li>
+                                <li><strong>90m² Kikuyu grass:</strong> R 12,500-14,250</li>
+                                <li><strong>Irrigation system:</strong> R 6,000</li>
+                            </ul>
+                            <div style="margin-top: 20px; padding: 15px; background: #fef3c7; border-radius: 8px; text-align: center;">
+                                <p style="font-size: 0.9em; color: #92400e; margin-bottom: 5px;">Total Investment</p>
+                                <p style="font-size: 2em; font-weight: bold; color: #d97706;">R 197,100-216,850</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #3b82f6;">
+                            <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 1.3em;">Standard Package</h4>
+                            <ul style="color: #1e3a8a; line-height: 2; margin-left: 20px;">
+                                <li><strong>Main renovation:</strong> R 95,600</li>
+                                <li><strong>Plastic timber playground:</strong> R 64,500</li>
+                                <li><strong>9 Steel picnic tables:</strong> R 58,500-85,500</li>
+                                <li><strong>90m² Instant lawn:</strong> R 14,050-16,350</li>
+                                <li><strong>Irrigation system:</strong> R 7,500</li>
+                            </ul>
+                            <div style="margin-top: 20px; padding: 15px; background: #dbeafe; border-radius: 8px; text-align: center;">
+                                <p style="font-size: 0.9em; color: #1e40af; margin-bottom: 5px;">Total Investment</p>
+                                <p style="font-size: 2em; font-weight: bold; color: #3b82f6;">R 240,150-269,450</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 4px solid #8b5cf6;">
+                            <h4 style="color: #5b21b6; margin-bottom: 15px; font-size: 1.3em;">Premium Package</h4>
+                            <ul style="color: #6b21a8; line-height: 2; margin-left: 20px;">
+                                <li><strong>Main renovation:</strong> R 95,600</li>
+                                <li><strong>Plastic timber playground:</strong> R 64,500</li>
+                                <li><strong>9 Hardwood picnic tables:</strong> R 72,000-108,000</li>
+                                <li><strong>90m² Buffalo grass:</strong> R 15,600-18,000</li>
+                                <li><strong>Irrigation + lighting:</strong> R 12,000</li>
+                            </ul>
+                            <div style="margin-top: 20px; padding: 15px; background: #ede9fe; border-radius: 8px; text-align: center;">
+                                <p style="font-size: 0.9em; color: #5b21b6; margin-bottom: 5px;">Total Investment</p>
+                                <p style="font-size: 2em; font-weight: bold; color: #8b5cf6;">R 259,700-298,100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 25px; padding: 20px; background: white; border-radius: 10px; border-left: 4px solid #3b82f6;">
+                        <p style="color: #1e40af; font-size: 1.1em; margin-bottom: 10px;"><strong>📊 Package Comparison:</strong></p>
+                        <ul style="color: #1e3a8a; line-height: 1.9; margin-left: 20px;">
+                            <li><strong>Budget Package:</strong> Best value with essential outdoor features - perfect for families starting out</li>
+                            <li><strong>Standard Package:</strong> Enhanced durability and premium playground - ideal for active family use</li>
+                            <li><strong>Premium Package:</strong> Top-tier materials and complete outdoor living space - ultimate family entertainment area</li>
+                            <li>💡 All packages include main renovation (R 95,600) + playground + 9 complete picnic table sets + 90m² professional lawn</li>
+                            <li>🌟 Delivery, installation, and professional labor included in all pricing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents Tab -->
+        <div id="documents" class="tab-content">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Project Documents & Estimates</h2>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                <h3 style="color: #667eea; margin-bottom: 20px;">📋 Main Estimate - R 95,600</h3>
+                <p style="margin-bottom: 15px; color: #718096;">Estimate #40 | 26 October 2025 | Karagelo Projects</p>
+                <iframe src="Estimate_40_26-10-2025.pdf" style="width: 100%; height: 800px; border: 1px solid #e2e8f0; border-radius: 8px;" title="Main Estimate Document"></iframe>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px;">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3 style="color: #667eea; margin-bottom: 20px;">📄 Supporting Document 1</h3>
+                    <iframe src="DOC-20251027-WA0033..pdf" style="width: 100%; height: 600px; border: 1px solid #e2e8f0; border-radius: 8px;" title="Supporting Document 1"></iframe>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3 style="color: #667eea; margin-bottom: 20px;">📄 Supporting Document 2</h3>
+                    <iframe src="DOC-20251027-WA0093..pdf" style="width: 100%; height: 600px; border: 1px solid #e2e8f0; border-radius: 8px;" title="Supporting Document 2"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floor Plan Tab -->
+        <div id="floorplan" class="tab-content">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Property Survey Scans</h2>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <h3 style="color: #667eea; margin-bottom: 20px;">📄 Official Property Documents</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
+                    <div style="border: 2px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                        <div style="background: #667eea; color: white; padding: 12px; font-weight: bold;">Scan 1</div>
+                        <iframe src="scan_1.pdf" width="100%" height="500" style="border: none;"></iframe>
+                    </div>
+                    <div style="border: 2px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                        <div style="background: #667eea; color: white; padding: 12px; font-weight: bold;">Scan 2</div>
+                        <iframe src="scan_2.pdf" width="100%" height="500" style="border: none;"></iframe>
+                    </div>
+                    <div style="border: 2px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                        <div style="background: #667eea; color: white; padding: 12px; font-weight: bold;">Scan 3</div>
+                        <iframe src="scan_3.pdf" width="100%" height="500" style="border: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Landscaping Costs Tab -->
+        <div id="landscaping" class="tab-content">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Landscaping & Outdoor Costs</h2>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                <h3 style="color: #667eea; margin-bottom: 20px;">🌱 Lawn & Grass Installation (South African Pricing)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: #f0fff4; border-radius: 10px; border-left: 4px solid #48bb78;">
+                        <h4 style="color: #2f855a;">Instant Lawn (LM Grass)</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #38a169; margin: 10px 0;">R 45-65/m²</p>
+                        <p style="color: #2f855a; font-size: 0.9em;">Premium quality, immediate coverage<br>60m² = R 2,700 - R 3,900</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fff4; border-radius: 10px; border-left: 4px solid #48bb78;">
+                        <h4 style="color: #2f855a;">Kikuyu Grass Rolls</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #38a169; margin: 10px 0;">R 35-50/m²</p>
+                        <p style="color: #2f855a; font-size: 0.9em;">Hardy, drought-resistant<br>60m² = R 2,100 - R 3,000</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fff4; border-radius: 10px; border-left: 4px solid #48bb78;">
+                        <h4 style="color: #2f855a;">Buffalo Grass</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #38a169; margin: 10px 0;">R 55-75/m²</p>
+                        <p style="color: #2f855a; font-size: 0.9em;">Shade-tolerant, low maintenance<br>60m² = R 3,300 - R 4,500</p>
+                    </div>
+                    <div style="padding: 20px; background: #f0fff4; border-radius: 10px; border-left: 4px solid #48bb78;">
+                        <h4 style="color: #2f855a;">Artificial Grass</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #38a169; margin: 10px 0;">R 180-350/m²</p>
+                        <p style="color: #2f855a; font-size: 0.9em;">Zero maintenance, 10-year lifespan<br>60m² = R 10,800 - R 21,000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                <h3 style="color: #667eea; margin-bottom: 20px;">🪑 Park Benches & Outdoor Furniture (South African Pricing)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="padding: 20px; background: #ebf8ff; border-radius: 10px; border-left: 4px solid #3182ce;">
+                        <h4 style="color: #2b6cb0;">Wooden Park Bench (Treated Pine)</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #3182ce; margin: 10px 0;">R 1,500 - R 3,500</p>
+                        <p style="color: #2c5282; font-size: 0.9em;">1.5m - 2m length<br>Weather-resistant treatment<br>Classic look, requires maintenance</p>
+                    </div>
+                    <div style="padding: 20px; background: #ebf8ff; border-radius: 10px; border-left: 4px solid #3182ce;">
+                        <h4 style="color: #2b6cb0;">Steel/Metal Park Bench</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #3182ce; margin: 10px 0;">R 2,500 - R 5,500</p>
+                        <p style="color: #2c5282; font-size: 0.9em;">Powder-coated steel frame<br>Slatted wood or metal seat<br>Durable, modern design</p>
+                    </div>
+                    <div style="padding: 20px; background: #ebf8ff; border-radius: 10px; border-left: 4px solid #3182ce;">
+                        <h4 style="color: #2b6cb0;">Concrete Park Bench</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #3182ce; margin: 10px 0;">R 3,000 - R 6,000</p>
+                        <p style="color: #2c5282; font-size: 0.9em;">Precast concrete<br>Permanent installation<br>Low maintenance, vandal-resistant</p>
+                    </div>
+                    <div style="padding: 20px; background: #ebf8ff; border-radius: 10px; border-left: 4px solid #3182ce;">
+                        <h4 style="color: #2b6cb0;">Recycled Plastic Bench</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #3182ce; margin: 10px 0;">R 3,500 - R 7,500</p>
+                        <p style="color: #2c5282; font-size: 0.9em;">Eco-friendly option<br>Weather-proof, no maintenance<br>Available in various colors</p>
+                    </div>
+                    <div style="padding: 20px; background: #ebf8ff; border-radius: 10px; border-left: 4px solid #3182ce;">
+                        <h4 style="color: #2b6cb0;">Picnic Table with Benches</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #3182ce; margin: 10px 0;">R 4,500 - R 9,000</p>
+                        <p style="color: #2c5282; font-size: 0.9em;">Complete set (table + 2 benches)<br>Treated wood or metal frame<br>Perfect for family gatherings</p>
+                    </div>
+                    <div style="padding: 20px; background: #ebf8ff; border-radius: 10px; border-left: 4px solid #3182ce;">
+                        <h4 style="color: #2b6cb0;">Custom Wooden Bench</h4>
+                        <p style="font-size: 1.5em; font-weight: bold; color: #3182ce; margin: 10px 0;">R 5,000 - R 12,000</p>
+                        <p style="color: #2c5282; font-size: 0.9em;">Hardwood (teak, meranti)<br>Custom design and dimensions<br>Premium quality, long-lasting</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%); padding: 25px; border-radius: 12px; border-left: 4px solid #38a169;">
+                <h3 style="color: #2f855a; margin-bottom: 15px;">💡 Recommended Playground Package</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div>
+                        <h4 style="color: #2f855a;">Basic Package (R 48,000 - R 56,000)</h4>
+                        <ul style="color: #276749; line-height: 1.8; margin-left: 20px;">
+                            <li>60m² Kikuyu grass: R 2,100 - R 3,000</li>
+                            <li>Irrigation system: R 6,000</li>
+                            <li>Ground work & leveling: R 7,500</li>
+                            <li>Jungle gym (wooden): R 23,000</li>
+                            <li>2x Wooden benches: R 3,000 - R 7,000</li>
+                            <li>Rubble removal: R 6,400</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #2f855a;">Premium Package (R 72,000 - R 86,000)</h4>
+                        <ul style="color: #276749; line-height: 1.8; margin-left: 20px;">
+                            <li>60m² Instant lawn: R 2,700 - R 3,900</li>
+                            <li>Irrigation system: R 6,000</li>
+                            <li>Ground work & leveling: R 7,500</li>
+                            <li>Jungle gym (plastic timber): R 45,000</li>
+                            <li>2x Steel/recycled plastic benches: R 5,000 - R 15,000</li>
+                            <li>Rubble removal: R 6,400</li>
+                            <li>Shade sail installation: Optional (+R 3,500)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #fff3cd; border: 2px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px;">
+                <h4 style="color: #856404; margin-bottom: 10px;">📌 Pricing Notes</h4>
+                <ul style="color: #856404; margin-left: 20px; line-height: 1.8;">
+                    <li>All prices in South African Rands (ZAR) as of 2025</li>
+                    <li>Grass prices include delivery within 50km radius</li>
+                    <li>Installation labor typically R 50-80/m² additional</li>
+                    <li>Park benches include assembly but not ground anchoring</li>
+                    <li>Concrete benches require professional installation (+R 800-1,500)</li>
+                    <li>Bulk orders (multiple benches) may qualify for discounts</li>
+                    <li>Prices vary by supplier, location, and seasonal availability</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>🏠 Bible House Renovation Project</h3>
+        <p>Professional painting services by Karagelo Projects | Estimate #40 | R 95,600</p>
+        <p style="margin-top: 10px; opacity: 0.8;">Created with ❤️ for your dream home transformation</p>
+    </div>
+
+    <script>
+        // Exterior renovation views - 420m² exterior painting
+        const rooms = [
+            { id: '1', name: 'Exterior Renovation - View 1', before: 'before and after pictures/pic1b4.jpg.jpg', after: 'before and after pictures/pic1after.jpg.png' },
+            { id: '2', name: 'Exterior Renovation - View 2', before: 'before and after pictures/pic2b4.jpg.jpg', after: 'before and after pictures/pic2after.jpg.png' },
+            { id: '3', name: 'Exterior Renovation - View 3', before: 'before and after pictures/pic3b4.jpg.jpg', after: 'before and after pictures/pic3after.jpg.png' },
+            { id: '4', name: 'Exterior Renovation - View 4', before: 'before and after pictures/pic4b4.jpg.jpg', after: 'before and after pictures/pic4after.jpg.png' },
+            { id: '5', name: 'Exterior Renovation - View 5', before: 'before and after pictures/pic4b42.jpg.jpg', after: 'before and after pictures/pic5after.jpg.png' },
+            { id: '6', name: 'Exterior Renovation - View 6', before: 'before and after pictures/pic6b4.jpg.jpg', after: 'before and after pictures/pic6after.jpg.png' },
+            { id: '7', name: 'Exterior Renovation - View 7', before: 'before and after pictures/pic7b4.jpg.jpg', after: 'before and after pictures/pic7after.jpg.png' },
+            { id: '8', name: 'Exterior Renovation - View 8', before: 'before and after pictures/pic8b4.jpg.jpg', after: 'before and after pictures/pic8after.jpg.png' }
+        ];
+
+        const palettes = {
+            warm_neutral: {
+                name: 'Warm Neutral',
+                color: '#E8DCC8',
+                prompts: {
+                    '0013': 'Paint the living room walls and trim in warm neutral tones. Use Micatex 20L exterior paint in #E8DCC8 with professional primer. Keep existing furniture and decor, only change wall and trim colors. Maintain natural lighting and room atmosphere.',
+                    '0014': 'Transform kitchen walls and trim to warm neutral #E8DCC8 using Micatex 20L. Apply solvent-based primer first. Preserve all kitchen cabinets, appliances, and countertops. Focus only on wall and trim painting.',
+                    '0015': 'Paint dining area walls and trim in warm neutral palette #E8DCC8. Use premium Micatex 20L paint with proper primer application. Keep dining table, chairs, and existing decor unchanged.',
+                    '0016': 'Master bedroom renovation: walls and trim in warm neutral #E8DCC8. Professional painting with Micatex 20L and primer. Maintain bedroom furniture, bedding, and personal items.',
+                    '0017': 'Bedroom 2 walls and trim painted in warm neutral tones #E8DCC8. Use Micatex 20L exterior paint with solvent-based primer. Preserve existing furniture and decor.',
+                    '0018': 'Bedroom 3 transformation: warm neutral #E8DCC8 walls and trim. Professional painting services with premium materials. Keep room layout and furnishings.',
+                    '0019': 'Bathroom renovation: paint walls and trim in warm neutral #E8DCC8. Use appropriate interior/exterior paint Micatex 20L with primer. Maintain bathroom fixtures and tiles.',
+                    '0020': 'Kids playroom walls and ceiling in warm neutral #E8DCC8. Professional painting with Micatex 20L and primer. Preserve play area furniture and toys.',
+                    '0021': 'Hallway walls and trim painted warm neutral #E8DCC8. Use premium paint and primer. Maintain hallway lighting and decor.',
+                    '0022': 'Entry area walls and trim in warm neutral tones #E8DCC8. Professional painting with Micatex 20L. Keep entry furniture and decorations.',
+                    '0023': 'Laundry room walls and trim painted #E8DCC8 warm neutral. Use appropriate paint and primer. Preserve laundry appliances and storage.',
+                    '0024': 'Study/office walls and trim in warm neutral #E8DCC8. Professional painting with premium materials. Maintain desk, bookshelves, and office equipment.'
+                }
+            },
+            modern_gray: {
+                name: 'Modern Gray',
+                color: '#E6E9ED',
+                prompts: {
+                    '0013': 'Paint living room walls and trim in modern gray tones #E6E9ED. Use Micatex 20L exterior paint with professional primer. Keep existing furniture and decor, only change wall and trim colors.',
+                    '0014': 'Transform kitchen to modern gray #E6E9ED walls and trim. Apply Micatex 20L with solvent-based primer. Preserve all kitchen elements except walls and trim.',
+                    '0015': 'Dining area in modern gray palette #E6E9ED. Professional painting with Micatex 20L and primer. Maintain dining furniture and atmosphere.',
+                    '0016': 'Master bedroom walls and trim painted modern gray #E6E9ED. Use premium paint and primer. Keep bedroom furnishings and layout.',
+                    '0017': 'Bedroom 2 renovation: modern gray #E6E9ED walls and trim. Professional painting services. Preserve existing decor.',
+                    '0018': 'Bedroom 3 in modern gray tones #E6E9ED. Micatex 20L paint with primer. Maintain room functionality and furniture.',
+                    '0019': 'Bathroom walls and trim modern gray #E6E9ED. Appropriate paint and primer for bathroom environment. Keep fixtures.',
+                    '0020': 'Kids playroom walls and ceiling in modern gray #E6E9ED. Professional painting. Preserve play area elements.',
+                    '0021': 'Hallway painted modern gray #E6E9ED. Premium materials and application. Maintain hallway features.',
+                    '0022': 'Entry area walls and trim in modern gray #E6E9ED. Professional painting. Keep entry decor.',
+                    '0023': 'Laundry room modern gray #E6E9ED. Appropriate paint and primer. Preserve appliances.',
+                    '0024': 'Study/office in modern gray #E6E9ED. Professional painting. Maintain workspace functionality.'
+                }
+            },
+            earthy_olive: {
+                name: 'Earthy Olive',
+                color: '#D9C5A1',
+                prompts: {
+                    '0013': 'Living room walls and trim in earthy olive tones #D9C5A1. Micatex 20L exterior paint with primer. Preserve existing elements.',
+                    '0014': 'Kitchen transformation to earthy olive #D9C5A1. Professional painting with premium materials. Keep kitchen layout.',
+                    '0015': 'Dining area earthy olive palette #D9C5A1. Micatex 20L and primer. Maintain dining atmosphere.',
+                    '0016': 'Master bedroom earthy olive #D9C5A1 walls and trim. Professional painting. Preserve bedroom elements.',
+                    '0017': 'Bedroom 2 in earthy olive tones #D9C5A1. Premium paint and primer. Keep existing decor.',
+                    '0018': 'Bedroom 3 earthy olive #D9C5A1. Professional painting services. Maintain room layout.',
+                    '0019': 'Bathroom walls and trim earthy olive #D9C5A1. Appropriate paint for bathroom. Keep fixtures.',
+                    '0020': 'Kids playroom earthy olive #D9C5A1 walls and ceiling. Professional painting. Preserve play elements.',
+                    '0021': 'Hallway earthy olive #D9C5A1. Premium materials. Maintain hallway features.',
+                    '0022': 'Entry area earthy olive #D9C5A1. Professional painting. Keep entry decor.',
+                    '0023': 'Laundry room earthy olive #D9C5A1. Appropriate paint and primer. Preserve appliances.',
+                    '0024': 'Study/office earthy olive #D9C5A1. Professional painting. Maintain workspace.'
+                }
+            }
+        };
+
+        let currentPalette = 'warm_neutral';
+
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+
+            // Refresh content if needed
+            if (tabName === 'comparisons') {
+                renderComparisons();
+            }
+        }
+
+        function setPalette(palette) {
+            currentPalette = palette;
+            document.querySelectorAll('.palette-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            renderComparisons();
+        }
+
+        function renderComparisons() {
+            const container = document.getElementById('roomComparisons');
+            container.innerHTML = '';
+
+            rooms.forEach(room => {
+                const roomCard = document.createElement('div');
+                roomCard.className = 'room-card';
+
+                roomCard.innerHTML = `
+                    <div class="room-title">${room.name}</div>
+                    <div class="comparison-container" onmousemove="moveSlider(event, this)" ontouchmove="moveSlider(event, this)">
+                        <img class="before-image" src="${room.before}" alt="Before - ${room.name}" onerror="this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&h=300&fit=crop'">
+                        <img class="after-image" src="${room.after}" alt="After - ${room.name}" onerror="this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&h=300&fit=crop'">
+                        <div class="slider"></div>
+                        <div class="slider-labels">
+                            <span>BEFORE</span>
+                            <span>AFTER</span>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(roomCard);
+            });
+        }
+
+        function moveSlider(event, container) {
+            const rect = container.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const percentage = (x / rect.width) * 100;
+
+            const afterImage = container.querySelector('.after-image');
+            const slider = container.querySelector('.slider');
+
+            afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            slider.style.left = `${percentage}%`;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderComparisons();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+IMAGE: IMG-20251103-WA0013.jpg
+PALETTE: Warm Neutral Refresh
+
+============================================================
+AI REPAINT PROMPT:
+============================================================
+
+Repaint all walls to warm beige (#E8DCC8), keep ceiling soft white (#F7F7F7), and paint trims/doors pure white (#FFFFFF).
+Wall finish matte/eggshell; trims satin. Preserve floors, windows, and lighting.
+
+============================================================
+NEGATIVE PROMPT:
+============================================================
+
+no added furniture, no texture overlays, no lighting changes, no floor changes
+
+============================================================
+
+INSTRUCTIONS:
+1. Upload this image to your AI tool
+2. Use inpainting/masking to select walls & trim
+3. Paste the prompt above
+4. Add negative prompt if supported
+5. Generate and save as: IMG-20251103-WA0013_after.jpg

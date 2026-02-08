@@ -4,17 +4,30 @@ A comprehensive renovation project documentation with interactive before/after i
 
 ## 📋 Project Overview
 
-- **Total Budget:** R 730,900
-- **Project Type:** Comprehensive Building Renovation
+- **Total Budget:** R 730,900 (Main Renovation) + R 95,600 (Hall Expansion) = R 826,500
+- **Project Type:** Bible House Expansion & Comprehensive Renovation
 - **Timeline:** 8-12 weeks (estimated)
+- **Mission:** Expanding worship hall to welcome larger congregations, creating sacred spaces for prayer and fellowship, and ensuring uninterrupted worship services
 
 ## 🎯 Key Features
 
+### ⛪ Church-Centered Mission
+- **Extending the Main Hall** - Welcoming larger congregations for worship and community gatherings
+- **Internal Renovation** - Enhancing sacred spaces including dedicated prayer rooms
+- **Emergency Worship System** - Solar panels and backup power ensuring uninterrupted worship services
+
+### Supporting Infrastructure
+- **Water Tanks** - Adequate water supply during services
+- **Solar Panels** - Emergency backup for continuous ministry operations
+- **Children's Playground** - Safe area for children's church and family ministry
+- **Fellowship Sitting Area** - Outdoor space for sharing and community building after services
+
+### Technical Improvements
 - ✅ Complete roof replacement and waterproofing
 - ✅ Full electrical system upgrade
 - ✅ Plumbing system modernization (including 2x 200L solar geysers)
 - ✅ Interior renovations (ceilings, walls, floors)
-- ✅ 16 interactive before/after image comparisons
+- ✅ 32+ interactive before/after image comparisons
 - ✅ Mobile-responsive design
 
 ## 🌐 View Project
@@ -23,6 +36,7 @@ Visit the live project: [Bible House Renovation Plan](https://bryne-ra.github.io
 
 ### 📄 Pages:
 - **Home:** https://bryne-ra.github.io/bible-house-reno/
+- **Renovation Quotes:** https://bryne-ra.github.io/bible-house-reno/quotes.html
 - **Step-by-Step Guide:** https://bryne-ra.github.io/bible-house-reno/overview.html
 - **Before & After:** https://bryne-ra.github.io/bible-house-reno/beforeafter.html
 - **Complete Single Page:** https://bryne-ra.github.io/bible-house-reno/professional_renovation_plan_complete.html

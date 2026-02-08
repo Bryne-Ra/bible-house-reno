@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible House Renovation - Renovation Quotes</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: #f9f9f9;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .nav-button {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .mission-statement {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .mission-statement h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .mission-statement p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        
+        .quote-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .quote-card.primary {
+            border-left: 6px solid #667eea;
+            background: linear-gradient(to right, #e3f2fd 0%, #f8f9fa 50%);
+        }
+        
+        .quote-card.secondary {
+            border-left: 6px solid #4caf50;
+        }
+        
+        .quote-card.tertiary {
+            border-left: 6px solid #ff9800;
+        }
+        
+        .quote-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .quote-title {
+            color: #667eea;
+            font-size: 2em;
+            margin: 0;
+        }
+        
+        .quote-price {
+            background: #667eea;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .quote-purpose {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ff9800;
+            margin: 20px 0;
+        }
+        
+        .quote-purpose h3 {
+            color: #f57c00;
+            margin-bottom: 10px;
+        }
+        
+        .quote-purpose p {
+            color: #333;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        
+        .quote-items {
+            margin: 20px 0;
+        }
+        
+        .quote-items h4 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .quote-items ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .quote-items li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .item-name {
+            font-weight: 500;
+        }
+        
+        .item-amount {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .comparison-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .comparison-images {
+            position: relative;
+            width: 100%;
+            height: 500px;
+        }
+        
+        .comparison-before, .comparison-after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .comparison-after {
+            clip-path: inset(0 50% 0 0);
+        }
+        
+        .comparison-before img, .comparison-after img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .comparison-slider {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: white;
+            left: 50%;
+            top: 0;
+            cursor: ew-resize;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        
+        .comparison-slider::before {
+            content: '⟨ ⟩';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: #667eea;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .comparison-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .comparison-title {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #667eea;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .supporting-elements {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .supporting-elements h4 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+        
+        .supporting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .support-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #4caf50;
+        }
+        
+        .support-item h5 {
+            color: #4caf50;
+            margin-bottom: 8px;
+        }
+        
+        .support-item p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .total-summary {
+            background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .total-summary h2 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+        
+        /* Mobile Responsive */
+        @media screen and (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .quote-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .quote-title {
+                font-size: 1.5em;
+            }
+            
+            .comparison-images {
+                height: 300px;
+            }
+            
+            .supporting-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⛪ Bible House Expansion & Renewal</h1>
+            <p>Building a Space for Growing Faith and Community</p>
+        </div>
+        
+        <div class="navigation">
+            <a href="index.html" class="nav-button">🏠 Home</a>
+            <a href="overview.html" class="nav-button">📊 Project Overview</a>
+        </div>
+        
+        <div class="content">
+            <div class="mission-statement">
+                <h2>🙏 Our Vision</h2>
+                <p>Expanding our worship hall to welcome larger congregations, creating sacred spaces for prayer and fellowship, and ensuring uninterrupted worship services through modern infrastructure. Every element of this renovation serves to strengthen our community's spiritual journey and enhance our capacity to serve God's people.</p>
+            </div>
+            
+            <!-- PRIMARY QUOTE: Extending the Main Hall -->
+            <div class="quote-card primary">
+                <div class="quote-header">
+                    <h2 class="quote-title">🏛️ Extending the Main Hall</h2>
+                    <div class="quote-price">R 95,600</div>
+                </div>
+                
+                <div class="quote-purpose">
+                    <h3>⛪ Church-Centered Purpose</h3>
+                    <p>The heart of our renovation - expanding the main worship hall to accommodate our growing congregation. This extension creates a welcoming sanctuary where more families can gather to worship, pray, and experience God's presence together. The enhanced space supports larger congregations during services, special ceremonies, and community gatherings.</p>
+                </div>
+                
+                <div class="quote-items">
+                    <h4>📋 Scope of Work</h4>
+                    <ul>
+                        <li><span class="item-name">Extension & Interior Painting (incl. materials)</span><span class="item-amount">R 25,000</span></li>
+                        <li><span class="item-name">Roof Painting & Waterproofing Labour</span><span class="item-amount">R 15,000</span></li>
+                        <li><span class="item-name">House Painting Outside (420 m²)</span><span class="item-amount">R 21,000</span></li>
+                        <li><span class="item-name">Micatex 20L (8 units)</span><span class="item-amount">R 9,600</span></li>
+                        <li><span class="item-name">Kids Playroom Walls and Ceiling</span><span class="item-amount">R 4,500</span></li>
+                        <li><span class="item-name">Converting the Garage (incl. materials)</span><span class="item-amount">R 4,500</span></li>
+                        <li><span class="item-name">Roof Materials (4 units)</span><span class="item-amount">R 10,000</span></li>
+                        <li><span class="item-name">Primer Solvent Based & Crack Filling (4 units)</span><span class="item-amount">R 6,000</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Before & After: Inside Hall -->
+                <div class="comparison-title">Inside Hall Transformation</div>
+                <div class="comparison-container" id="inside-hall">
+                    <div class="comparison-images">
+                        <div class="comparison-before">
+                            <img src="before and after pictures/inside_hall_before.jpeg" alt="Inside Hall Before">
+                        </div>
+                        <div class="comparison-after">
+                            <img src="before and after pictures/inside_hall_after.png" alt="Inside Hall After">
+                        </div>
+                        <div class="comparison-slider"></div>
+                    </div>
+                    <div class="comparison-labels">
+                        <span><strong>Before</strong> - Current Hall Space</span>
+                        <span><strong>After</strong> - Expanded Worship Area</span>
+                    </div>
+                </div>
+                
+                <!-- Before & After: Outside Hall -->
+                <div class="comparison-title">Exterior Hall Enhancement</div>
+                <div class="comparison-container" id="outside-hall">
+                    <div class="comparison-images">
+                        <div class="comparison-before">
+                            <img src="before and after pictures/outside_hall_before.jpeg" alt="Outside Hall Before">
+                        </div>
+                        <div class="comparison-after">
+                            <img src="before and after pictures/outside_hall_after.png" alt="Outside Hall After">
+                        </div>
+                        <div class="comparison-slider"></div>
+                    </div>
+                    <div class="comparison-labels">
+                        <span><strong>Before</strong> - Original Structure</span>
+                        <span><strong>After</strong> - Expanded & Renewed</span>
+                    </div>
+                </div>
+                
+                <div class="supporting-elements">
+                    <h4>🌟 Supporting Elements for Enhanced Ministry</h4>
+                    <div class="supporting-grid">
+                        <div class="support-item">
+                            <h5>💧 Water Tanks</h5>
+                            <p>Ensuring adequate water supply during services for congregation needs and facilities</p>
+                        </div>
+                        <div class="support-item">
+                            <h5>⚡ Solar Panels</h5>
+                            <p>Part of the Emergency Worship System - providing uninterrupted power for services</p>
+                        </div>
+                        <div class="support-item">
+                            <h5>🎪 Children's Playground</h5>
+                            <p>Safe play area for children's church programs and family ministry</p>
+                        </div>
+                        <div class="support-item">
+                            <h5>🪑 Fellowship Sitting Area</h5>
+                            <p>Outdoor space for sharing, fellowship, and community building after services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECONDARY QUOTE: Internal Renovation -->
+            <div class="quote-card secondary">
+                <div class="quote-header">
+                    <h2 class="quote-title">🕊️ Internal Renovation</h2>
+                    <div class="quote-price">R 730,900</div>
+                </div>
+                
+                <div class="quote-purpose">
+                    <h3>⛪ Church-Centered Purpose</h3>
+                    <p>Comprehensive interior renovation to enhance sacred spaces for prayer and worship. This includes creating dedicated prayer rooms, improving facilities for various ministries, and ensuring the building infrastructure supports continuous spiritual activities. Every aspect is designed to create an atmosphere conducive to worship, prayer, and spiritual growth.</p>
+                </div>
+                
+                <div class="quote-items">
+                    <h4>📋 Comprehensive Interior Work</h4>
+                    <ul>
+                        <li><span class="item-name">🏗️ Roof Waterproofing - Weather Protection</span><span class="item-amount">R 80,000</span></li>
+                        <li><span class="item-name">⚡ Electrical System - Safe & Reliable Power</span><span class="item-amount">R 120,000</span></li>
+                        <li><span class="item-name">🚰 Plumbing (incl. 2x 200L Solar Geysers)</span><span class="item-amount">R 138,500</span></li>
+                        <li><span class="item-name">🏢 Ceilings - Acoustic & Aesthetic Enhancement</span><span class="item-amount">R 120,000</span></li>
+                        <li><span class="item-name">🎨 Painting - Sacred Atmosphere</span><span class="item-amount">R 80,000</span></li>
+                        <li><span class="item-name">🔲 Tiling - Durable Clean Surfaces</span><span class="item-amount">R 100,000</span></li>
+                        <li><span class="item-name">🚪 Doors & Hardware - Security & Privacy</span><span class="item-amount">R 18,440</span></li>
+                        <li><span class="item-name">🔧 Windows, Demolition & Sundries (incl. VAT)</span><span class="item-amount">R 93,961</span></li>
+                    </ul>
+                </div>
+                
+                <div class="quote-purpose" style="background: #e3f2fd; border-left-color: #2196f3;">
+                    <h3 style="color: #1976d2;">🙏 Sacred Spaces Feature</h3>
+                    <p>The renovation includes creating dedicated prayer rooms where members can seek solitude for personal prayer and meditation. These sanctified spaces are designed with acoustics, lighting, and peaceful ambiance in mind, providing refuge for spiritual contemplation and communion with God.</p>
+                </div>
+            </div>
+            
+            <!-- TERTIARY QUOTE: Emergency Worship System -->
+            <div class="quote-card tertiary">
+                <div class="quote-header">
+                    <h2 class="quote-title">⚡ Emergency Worship System (Blackout Support)</h2>
+                    <div class="quote-price">Included in R 138,500</div>
+                </div>
+                
+                <div class="quote-purpose">
+                    <h3>⛪ Church-Centered Purpose</h3>
+                    <p>Ensuring uninterrupted worship services during power outages through solar power backup and water storage systems. This critical infrastructure guarantees that our congregation can always gather for worship, prayer meetings, and community services regardless of external power disruptions. The solar geysers and backup systems sustain our ministry operations during blackouts.</p>
+                </div>
+                
+                <div class="quote-items">
+                    <h4>📋 Backup System Components</h4>
+                    <ul>
+                        <li><span class="item-name">☀️ Solar Geysers (2x 200L) - Hot Water & Power</span><span class="item-amount">R 35,000</span></li>
+                        <li><span class="item-name">⚡ Electrical Backup Infrastructure</span><span class="item-amount">Integrated</span></li>
+                        <li><span class="item-name">💧 Water Storage & Distribution System</span><span class="item-amount">Integrated</span></li>
+                        <li><span class="item-name">🔌 Emergency Lighting for Safety</span><span class="item-amount">Integrated</span></li>
+                    </ul>
+                </div>
+                
+                <div class="quote-purpose" style="background: #fff9c4; border-left-color: #fbc02d;">
+                    <h3 style="color: #f57f17;">⚡ Ministry Continuity</h3>
+                    <p>This system ensures that worship services, prayer meetings, youth gatherings, and community outreach programs can continue without interruption. Hot water facilities remain operational for fellowship meals and cleanliness needs. The congregation never has to postpone gathering because of power challenges - our ministry continues serving God's people unhindered.</p>
+                </div>
+            </div>
+            
+            <!-- Optional Children's Ministry Additions -->
+            <div class="section">
+                <h2 style="color: #667eea; margin-bottom: 20px;">🎪 Optional Children's Ministry Enhancements</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
+                    <div style="padding: 25px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                        <h3 style="font-size: 1.3em; margin-bottom: 15px;">🌳 Wooden Den Package</h3>
+                        <p style="font-size: 2em; font-weight: bold; margin: 15px 0;">R 42,500</p>
+                        <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                            <p><strong>Children's Church Equipment:</strong></p>
+                            <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                                <li>Wooden jungle gym with solid bridge (R 23,000)</li>
+                                <li>Ground work & leveling (R 7,500)</li>
+                                <li>Lawn installation (60m²) (R 6,000)</li>
+                                <li>Irrigation system (R 6,000)</li>
+                            </ul>
+                            <p style="margin-top: 10px; font-style: italic;">Safe outdoor play area for Sunday School and children's programs</p>
+                        </div>
+                    </div>
+                    <div style="padding: 25px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                        <h3 style="font-size: 1.3em; margin-bottom: 15px;">🎨 Plastic Timber Package</h3>
+                        <p style="font-size: 2em; font-weight: bold; margin: 15px 0;">R 64,500</p>
+                        <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                            <p><strong>Children's Church Equipment:</strong></p>
+                            <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                                <li>Plastic timber jungle gym - premium (R 45,000)</li>
+                                <li>Ground work & leveling (R 7,500)</li>
+                                <li>Instant lawn installation (60m²) (R 6,000)</li>
+                                <li>Irrigation system (R 6,000)</li>
+                            </ul>
+                            <p style="margin-top: 10px; font-style: italic;">Durable, low-maintenance play area for growing youth ministry</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Total Summary -->
+            <div class="total-summary">
+                <h3>💒 Total Investment in God's House</h3>
+                <h2>Main Renovation: R 826,500</h2>
+                <p style="font-size: 1.1em; margin-top: 15px;">Hall Expansion (R 95,600) + Internal Renovation (R 730,900)</p>
+                <p style="font-size: 0.95em; margin-top: 20px; opacity: 0.9;">Additional Children's Ministry: R 42,500 - R 64,500 (Optional)</p>
+                <div style="margin-top: 25px; padding-top: 20px; border-top: 2px solid rgba(255,255,255,0.3);">
+                    <p style="font-size: 1.2em;"><strong>Building a sanctuary that welcomes all, sustains worship, and nurtures spiritual growth for generations to come.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Image comparison slider functionality
+        function initComparisonSlider(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            const slider = container.querySelector('.comparison-slider');
+            const afterImage = container.querySelector('.comparison-after');
+            let isActive = false;
+
+            slider.addEventListener('mousedown', function() {
+                isActive = true;
+            });
+
+            document.addEventListener('mouseup', function() {
+                isActive = false;
+            });
+
+            document.addEventListener('mousemove', function(e) {
+                if (!isActive) return;
+                
+                const containerRect = container.getBoundingClientRect();
+                let x = e.clientX - containerRect.left;
+                
+                // Constrain x within container bounds
+                x = Math.max(0, Math.min(x, containerRect.width));
+                
+                const percentage = (x / containerRect.width) * 100;
+                
+                slider.style.left = percentage + '%';
+                afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            });
+
+            // Touch support for mobile
+            slider.addEventListener('touchstart', function() {
+                isActive = true;
+            });
+
+            document.addEventListener('touchend', function() {
+                isActive = false;
+            });
+
+            document.addEventListener('touchmove', function(e) {
+                if (!isActive) return;
+                
+                const containerRect = container.getBoundingClientRect();
+                let x = e.touches[0].clientX - containerRect.left;
+                
+                x = Math.max(0, Math.min(x, containerRect.width));
+                
+                const percentage = (x / containerRect.width) * 100;
+                
+                slider.style.left = percentage + '%';
+                afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            });
+        }
+
+        // Initialize all comparison sliders
+        initComparisonSlider('inside-hall');
+        initComparisonSlider('outside-hall');
+    </script>
+</body>
+</html>
